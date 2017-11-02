@@ -1,7 +1,7 @@
 /**
  * @(#)Tree.java    1.30 03/01/23
  *
- * Copyright 2003 Sun Microsystems, Inc. All rights reserved. Call 
+ * Copyright 2003 Sun Microsystems, Inc. All rights reserved. Call Calculate Assign
  * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. assig Sys PrintComp
  */
 package decaf.tree;
@@ -237,10 +237,12 @@ public abstract class Tree {
      */
     public static final int ERRONEOUS = TYPEPARAMETER + 1;
 
+    public static final int CALCULATE = ERRONEOUS + 1;
+
     /**
      * Unary operators, of type Unary.add
      */
-    public static final int POS = ERRONEOUS + 1;
+    public static final int POS = CALCULATE + 1;
     public static final int NEG = POS + 1;
     public static final int NOT = NEG + 1;
     public static final int RE = NOT + 1;
@@ -995,11 +997,12 @@ public abstract class Tree {
         public LValue left;
         public Expr expr;
 
-        public Assign(LValue left, Expr expr, Location loc) {
+        public Assign(Expr left, Expr expr, Location loc) {
             super(ASSIGN, loc);
-            this.left = left;
+            this.left = (LValue) left;
             this.expr = expr;
         }
+
 
         @Override
         public void accept(Visitor v) {
@@ -1013,6 +1016,29 @@ public abstract class Tree {
             left.printTo(pw);
             expr.printTo(pw);
             pw.decIndent();
+        }
+    }
+
+        /**
+     * A calculate statement (like call expr).
+     */
+    public static class Calculate extends Tree {
+
+        public Expr expr;
+
+        public Calculate(Expr expr, Location loc) {
+            super(CALCULATE, loc);
+            this.expr = expr;
+        }
+
+        @Override
+        public void accept(Visitor v) {
+            v.visitCalculate(this);
+        }
+
+        @Override
+        public void printTo(IndentPrintWriter pw) {
+            expr.printTo(pw);
         }
     }
 
@@ -1719,5 +1745,9 @@ public abstract class Tree {
         public void visitTree(Tree that) {
             assert false;
         }
+
+         public void visitCalculate(Calculate that) {
+              visitCalculate(that);
+          }
     }
 }

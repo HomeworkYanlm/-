@@ -1,7 +1,7 @@
 /* This is auto-generated source by LL1-Parser-Gen.
  * Specification file: /Users/liminyan/Desktop/work/PA_1B/src/decaf/frontend/Parser.spec
  * Options: unstrict mode
- * Generated at: Wed Nov 01 16:02:42 CST 2017
+ * Generated at: Thu Nov 02 09:14:48 CST 2017
  * Please do NOT modify it!
  *
  * Project repository: https://github.com/paulzfm/LL1-Parser-Gen
@@ -38,80 +38,91 @@ public class Table
     public static final int RETURN = 269; //# line 16
     public static final int BREAK = 270; //# line 16
     public static final int NEW = 271; //# line 16
-    public static final int PRINT = 272; //# line 17
-    public static final int READ_INTEGER = 273; //# line 17
-    public static final int READ_LINE = 274; //# line 17
-    public static final int LITERAL = 275; //# line 18
-    public static final int IDENTIFIER = 276; //# line 19
-    public static final int AND = 277; //# line 19
-    public static final int OR = 278; //# line 19
-    public static final int STATIC = 279; //# line 19
-    public static final int INSTANCEOF = 280; //# line 19
-    public static final int LESS_EQUAL = 281; //# line 20
-    public static final int GREATER_EQUAL = 282; //# line 20
-    public static final int EQUAL = 283; //# line 20
-    public static final int NOT_EQUAL = 284; //# line 20
+    public static final int CASE = 272; //# line 17
+    public static final int OOD = 273; //# line 17
+    public static final int DDO = 274; //# line 17
+    public static final int DCOPY = 275; //# line 17
+    public static final int COMPLEX = 276; //# line 17
+    public static final int SCOPY = 277; //# line 17
+    public static final int SUPER = 278; //# line 17
+    public static final int IMAGE = 279; //# line 17
+    public static final int DEFULT = 280; //# line 17
+    public static final int DDD = 281; //# line 17
+    public static final int PRINTCOMP = 282; //# line 17
+    public static final int PRINT = 283; //# line 18
+    public static final int READ_INTEGER = 284; //# line 18
+    public static final int READ_LINE = 285; //# line 18
+    public static final int LITERAL = 286; //# line 19
+    public static final int IDENTIFIER = 287; //# line 20
+    public static final int AND = 288; //# line 20
+    public static final int OR = 289; //# line 20
+    public static final int STATIC = 290; //# line 20
+    public static final int INSTANCEOF = 291; //# line 20
+    public static final int LESS_EQUAL = 292; //# line 21
+    public static final int GREATER_EQUAL = 293; //# line 21
+    public static final int EQUAL = 294; //# line 21
+    public static final int NOT_EQUAL = 295; //# line 21
     
-    public static final int VariableDef = 285;
-    public static final int ExprT5 = 286;
-    public static final int Oper3 = 287;
-    public static final int Oper6 = 288;
-    public static final int VariableList = 289;
-    public static final int Formals = 290;
-    public static final int Oper7 = 291;
-    public static final int Expr8 = 292;
-    public static final int AfterSimpleTypeExpr = 293;
-    public static final int Expr2 = 294;
-    public static final int Oper2 = 295;
-    public static final int Expr6 = 296;
-    public static final int BreakStmt = 297;
-    public static final int ExprT2 = 298;
-    public static final int StmtList = 299;
-    public static final int Constant = 300;
-    public static final int SubVariableList = 301;
-    public static final int PrintStmt = 302;
-    public static final int ForStmt = 303;
-    public static final int Expr9 = 304;
-    public static final int Expr1 = 305;
-    public static final int Oper1 = 306;
-    public static final int ElseClause = 307;
-    public static final int FieldList = 308;
-    public static final int SubExprList = 309;
-    public static final int AfterParenExpr = 310;
-    public static final int ClassDef = 311;
-    public static final int ReturnStmt = 312;
-    public static final int ExprList = 313;
-    public static final int StmtBlock = 314;
-    public static final int FunctionField = 315;
-    public static final int AfterIdentExpr = 316;
-    public static final int Program = 317;
-    public static final int Expr = 318;
-    public static final int Type = 319;
-    public static final int Expr5 = 320;
-    public static final int AfterNewExpr = 321;
-    public static final int Assignment = 322;
-    public static final int ExtendsClause = 323;
-    public static final int Oper5 = 324;
-    public static final int ArrayType = 325;
-    public static final int Expr3 = 326;
-    public static final int Actuals = 327;
-    public static final int Variable = 328;
-    public static final int ExprT3 = 329;
-    public static final int Stmt = 330;
-    public static final int SimpleStmt = 331;
-    public static final int SimpleType = 332;
-    public static final int WhileStmt = 333;
-    public static final int ExprT1 = 334;
-    public static final int Expr4 = 335;
-    public static final int ExprT4 = 336;
-    public static final int ReturnExpr = 337;
-    public static final int IfStmt = 338;
-    public static final int ExprT6 = 339;
-    public static final int ExprT8 = 340;
-    public static final int Expr7 = 341;
-    public static final int ClassList = 342;
-    public static final int Oper4 = 343;
-    public static final int Field = 344;
+    public static final int VariableDef = 296;
+    public static final int ExprT5 = 297;
+    public static final int Oper3 = 298;
+    public static final int Oper6 = 299;
+    public static final int VariableList = 300;
+    public static final int Formals = 301;
+    public static final int Oper7 = 302;
+    public static final int Expr8 = 303;
+    public static final int AfterSimpleTypeExpr = 304;
+    public static final int Expr2 = 305;
+    public static final int Oper2 = 306;
+    public static final int Expr6 = 307;
+    public static final int BreakStmt = 308;
+    public static final int ExprT2 = 309;
+    public static final int StmtList = 310;
+    public static final int Constant = 311;
+    public static final int SubVariableList = 312;
+    public static final int PrintStmt = 313;
+    public static final int ForStmt = 314;
+    public static final int Expr9 = 315;
+    public static final int Expr1 = 316;
+    public static final int Oper1 = 317;
+    public static final int ElseClause = 318;
+    public static final int FieldList = 319;
+    public static final int SubExprList = 320;
+    public static final int AfterParenExpr = 321;
+    public static final int ClassDef = 322;
+    public static final int ReturnStmt = 323;
+    public static final int ExprList = 324;
+    public static final int StmtBlock = 325;
+    public static final int FunctionField = 326;
+    public static final int AfterIdentExpr = 327;
+    public static final int Program = 328;
+    public static final int Expr = 329;
+    public static final int Type = 330;
+    public static final int Expr5 = 331;
+    public static final int AfterNewExpr = 332;
+    public static final int Assignment = 333;
+    public static final int ExtendsClause = 334;
+    public static final int Oper5 = 335;
+    public static final int ArrayType = 336;
+    public static final int Expr3 = 337;
+    public static final int Actuals = 338;
+    public static final int Variable = 339;
+    public static final int ExprT3 = 340;
+    public static final int Stmt = 341;
+    public static final int SimpleStmt = 342;
+    public static final int SimpleType = 343;
+    public static final int WhileStmt = 344;
+    public static final int ExprT1 = 345;
+    public static final int Expr4 = 346;
+    public static final int ExprT4 = 347;
+    public static final int ReturnExpr = 348;
+    public static final int IfStmt = 349;
+    public static final int ExprT6 = 350;
+    public static final int ExprT8 = 351;
+    public static final int Expr7 = 352;
+    public static final int ClassList = 353;
+    public static final int Oper4 = 354;
+    public static final int Field = 355;
     
     /* start symbol */
     public final int start = Program;
@@ -124,28 +135,30 @@ public class Table
       */
         
     public boolean isNonTerminal(int symbol) {
-        return symbol >= 285;
+        return symbol >= 296;
     }
     
     private final String[] allSymbols = {
         "VOID", "BOOL", "INT", "STRING", "CLASS",
         "NULL", "EXTENDS", "THIS", "WHILE", "FOR",
         "IF", "ELSE", "RETURN", "BREAK", "NEW",
-        "PRINT", "READ_INTEGER", "READ_LINE", "LITERAL", "IDENTIFIER",
-        "AND", "OR", "STATIC", "INSTANCEOF", "LESS_EQUAL",
-        "GREATER_EQUAL", "EQUAL", "NOT_EQUAL", "VariableDef", "ExprT5",
-        "Oper3", "Oper6", "VariableList", "Formals", "Oper7",
-        "Expr8", "AfterSimpleTypeExpr", "Expr2", "Oper2", "Expr6",
-        "BreakStmt", "ExprT2", "StmtList", "Constant", "SubVariableList",
-        "PrintStmt", "ForStmt", "Expr9", "Expr1", "Oper1",
-        "ElseClause", "FieldList", "SubExprList", "AfterParenExpr", "ClassDef",
-        "ReturnStmt", "ExprList", "StmtBlock", "FunctionField", "AfterIdentExpr",
-        "Program", "Expr", "Type", "Expr5", "AfterNewExpr",
-        "Assignment", "ExtendsClause", "Oper5", "ArrayType", "Expr3",
-        "Actuals", "Variable", "ExprT3", "Stmt", "SimpleStmt",
-        "SimpleType", "WhileStmt", "ExprT1", "Expr4", "ExprT4",
-        "ReturnExpr", "IfStmt", "ExprT6", "ExprT8", "Expr7",
-        "ClassList", "Oper4", "Field",
+        "CASE", "OOD", "DDO", "DCOPY", "COMPLEX",
+        "SCOPY", "SUPER", "IMAGE", "DEFULT", "DDD",
+        "PRINTCOMP", "PRINT", "READ_INTEGER", "READ_LINE", "LITERAL",
+        "IDENTIFIER", "AND", "OR", "STATIC", "INSTANCEOF",
+        "LESS_EQUAL", "GREATER_EQUAL", "EQUAL", "NOT_EQUAL", "VariableDef",
+        "ExprT5", "Oper3", "Oper6", "VariableList", "Formals",
+        "Oper7", "Expr8", "AfterSimpleTypeExpr", "Expr2", "Oper2",
+        "Expr6", "BreakStmt", "ExprT2", "StmtList", "Constant",
+        "SubVariableList", "PrintStmt", "ForStmt", "Expr9", "Expr1",
+        "Oper1", "ElseClause", "FieldList", "SubExprList", "AfterParenExpr",
+        "ClassDef", "ReturnStmt", "ExprList", "StmtBlock", "FunctionField",
+        "AfterIdentExpr", "Program", "Expr", "Type", "Expr5",
+        "AfterNewExpr", "Assignment", "ExtendsClause", "Oper5", "ArrayType",
+        "Expr3", "Actuals", "Variable", "ExprT3", "Stmt",
+        "SimpleStmt", "SimpleType", "WhileStmt", "ExprT1", "Expr4",
+        "ExprT4", "ReturnExpr", "IfStmt", "ExprT6", "ExprT8",
+        "Expr7", "ClassList", "Oper4", "Field",
     };
     
     /**
@@ -236,7 +249,7 @@ public class Table
       */
         
     public Set<Integer> beginSet(int symbol) {
-        return begin.get(symbol - 285);
+        return begin.get(symbol - 296);
     }
     
     /* follow set */
@@ -312,7 +325,7 @@ public class Table
       */
         
     public Set<Integer> followSet(int symbol) {
-        return follow.get(symbol - 285);
+        return follow.get(symbol - 296);
     }
     
     public Table() {
@@ -337,7 +350,7 @@ public class Table
         
     public Pair<Integer, List<Integer>> query(int nonTerminal, int lookahead) {
         switch (nonTerminal) {
-            //# line 48
+            //# line 49
             case VariableDef: {
                 switch (lookahead) {
                     case VOID:
@@ -349,7 +362,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 485
+            //# line 486
             case ExprT5: {
                 switch (lookahead) {
                     case '+':
@@ -372,7 +385,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 275
+            //# line 276
             case Oper3: {
                 switch (lookahead) {
                     case EQUAL:
@@ -382,7 +395,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 321
+            //# line 322
             case Oper6: {
                 switch (lookahead) {
                     case '*':
@@ -394,7 +407,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 164
+            //# line 165
             case VariableList: {
                 switch (lookahead) {
                     case VOID:
@@ -406,7 +419,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 154
+            //# line 155
             case Formals: {
                 switch (lookahead) {
                     case VOID:
@@ -420,7 +433,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 338
+            //# line 339
             case Oper7: {
                 switch (lookahead) {
                     case '-':
@@ -430,7 +443,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 541
+            //# line 542
             case Expr8: {
                 switch (lookahead) {
                     case READ_LINE:
@@ -446,7 +459,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 649
+            //# line 650
             case AfterSimpleTypeExpr: {
                 switch (lookahead) {
                     case ']':
@@ -466,7 +479,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 386
+            //# line 387
             case Expr2: {
                 switch (lookahead) {
                     case '!':
@@ -484,7 +497,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 268
+            //# line 269
             case Oper2: {
                 switch (lookahead) {
                     case AND:
@@ -492,7 +505,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 502
+            //# line 503
             case Expr6: {
                 switch (lookahead) {
                     case '!':
@@ -510,7 +523,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 726
+            //# line 727
             case BreakStmt: {
                 switch (lookahead) {
                     case BREAK:
@@ -518,7 +531,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 398
+            //# line 399
             case ExprT2: {
                 switch (lookahead) {
                     case AND:
@@ -533,7 +546,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 191
+            //# line 192
             case StmtList: {
                 switch (lookahead) {
                     case PRINT:
@@ -566,7 +579,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 673
+            //# line 674
             case Constant: {
                 switch (lookahead) {
                     case LITERAL:
@@ -576,7 +589,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 174
+            //# line 175
             case SubVariableList: {
                 switch (lookahead) {
                     case ',':
@@ -586,7 +599,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 758
+            //# line 759
             case PrintStmt: {
                 switch (lookahead) {
                     case PRINT:
@@ -594,7 +607,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 720
+            //# line 721
             case ForStmt: {
                 switch (lookahead) {
                     case FOR:
@@ -602,7 +615,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 593
+            //# line 594
             case Expr9: {
                 switch (lookahead) {
                     case LITERAL:
@@ -625,7 +638,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 357
+            //# line 358
             case Expr1: {
                 switch (lookahead) {
                     case '!':
@@ -643,7 +656,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 261
+            //# line 262
             case Oper1: {
                 switch (lookahead) {
                     case OR:
@@ -651,7 +664,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 738
+            //# line 739
             case ElseClause: {
                 switch (lookahead) {
                     case ELSE:
@@ -685,7 +698,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 114
+            //# line 115
             case FieldList: {
                 switch (lookahead) {
                     case VOID:
@@ -700,7 +713,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 701
+            //# line 702
             case SubExprList: {
                 switch (lookahead) {
                     case ',':
@@ -710,7 +723,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 661
+            //# line 662
             case AfterParenExpr: {
                 switch (lookahead) {
                     case '!':
@@ -730,7 +743,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 101
+            //# line 102
             case ClassDef: {
                 switch (lookahead) {
                     case CLASS:
@@ -738,7 +751,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 745
+            //# line 746
             case ReturnStmt: {
                 switch (lookahead) {
                     case RETURN:
@@ -746,7 +759,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 693
+            //# line 694
             case ExprList: {
                 switch (lookahead) {
                     case '!':
@@ -764,7 +777,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 185
+            //# line 186
             case StmtBlock: {
                 switch (lookahead) {
                     case '{':
@@ -772,7 +785,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 146
+            //# line 147
             case FunctionField: {
                 switch (lookahead) {
                     case '(':
@@ -782,7 +795,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 586
+            //# line 587
             case AfterIdentExpr: {
                 switch (lookahead) {
                     case '(':
@@ -811,7 +824,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 26
+            //# line 27
             case Program: {
                 switch (lookahead) {
                     case CLASS:
@@ -819,7 +832,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 351
+            //# line 352
             case Expr: {
                 switch (lookahead) {
                     case '!':
@@ -837,7 +850,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 82
+            //# line 83
             case Type: {
                 switch (lookahead) {
                     case VOID:
@@ -849,7 +862,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 473
+            //# line 474
             case Expr5: {
                 switch (lookahead) {
                     case '!':
@@ -867,7 +880,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 635
+            //# line 636
             case AfterNewExpr: {
                 switch (lookahead) {
                     case IDENTIFIER:
@@ -881,7 +894,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 252
+            //# line 253
             case Assignment: {
                 switch (lookahead) {
                     case '=':
@@ -892,7 +905,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 107
+            //# line 108
             case ExtendsClause: {
                 switch (lookahead) {
                     case EXTENDS:
@@ -902,7 +915,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 309
+            //# line 310
             case Oper5: {
                 switch (lookahead) {
                     case '+':
@@ -912,7 +925,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 91
+            //# line 92
             case ArrayType: {
                 switch (lookahead) {
                     case '[':
@@ -922,7 +935,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 415
+            //# line 416
             case Expr3: {
                 switch (lookahead) {
                     case '!':
@@ -940,7 +953,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 683
+            //# line 684
             case Actuals: {
                 switch (lookahead) {
                     case '!':
@@ -960,7 +973,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 54
+            //# line 55
             case Variable: {
                 switch (lookahead) {
                     case VOID:
@@ -972,7 +985,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 427
+            //# line 428
             case ExprT3: {
                 switch (lookahead) {
                     case EQUAL:
@@ -989,7 +1002,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 199
+            //# line 200
             case Stmt: {
                 switch (lookahead) {
                     case VOID:
@@ -1028,7 +1041,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 241
+            //# line 242
             case SimpleStmt: {
                 switch (lookahead) {
                     case '!':
@@ -1049,7 +1062,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 60
+            //# line 61
             case SimpleType: {
                 switch (lookahead) {
                     case INT:
@@ -1065,7 +1078,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 714
+            //# line 715
             case WhileStmt: {
                 switch (lookahead) {
                     case WHILE:
@@ -1073,7 +1086,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 369
+            //# line 370
             case ExprT1: {
                 switch (lookahead) {
                     case OR:
@@ -1087,7 +1100,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 444
+            //# line 445
             case Expr4: {
                 switch (lookahead) {
                     case '!':
@@ -1105,7 +1118,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 456
+            //# line 457
             case ExprT4: {
                 switch (lookahead) {
                     case LESS_EQUAL:
@@ -1126,7 +1139,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 751
+            //# line 752
             case ReturnExpr: {
                 switch (lookahead) {
                     case '!':
@@ -1146,7 +1159,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 732
+            //# line 733
             case IfStmt: {
                 switch (lookahead) {
                     case IF:
@@ -1154,7 +1167,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 514
+            //# line 515
             case ExprT6: {
                 switch (lookahead) {
                     case '*':
@@ -1180,7 +1193,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 561
+            //# line 562
             case ExprT8: {
                 switch (lookahead) {
                     case '[':
@@ -1209,7 +1222,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 531
+            //# line 532
             case Expr7: {
                 switch (lookahead) {
                     case '-':
@@ -1228,7 +1241,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 37
+            //# line 38
             case ClassList: {
                 switch (lookahead) {
                     case CLASS:
@@ -1239,7 +1252,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 287
+            //# line 288
             case Oper4: {
                 switch (lookahead) {
                     case LESS_EQUAL:
@@ -1253,7 +1266,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 130
+            //# line 131
             case Field: {
                 switch (lookahead) {
                     case STATIC:
@@ -1283,12 +1296,12 @@ public class Table
     public void act(int id, SemValue[] params) {
         switch (id) {
             case 0: {
-                //# line 49
+                //# line 50
                 params[0].vdef = params[1].vdef;
                 return;
             }
             case 1: {
-                //# line 486
+                //# line 487
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1307,37 +1320,37 @@ public class Table
                 return;
             }
             case 3: {
-                //# line 276
+                //# line 277
                 params[0].counter = Tree.EQ;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 4: {
-                //# line 281
+                //# line 282
                 params[0].counter = Tree.NE;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 5: {
-                //# line 322
+                //# line 323
                 params[0].counter = Tree.MUL;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 6: {
-                //# line 327
+                //# line 328
                 params[0].counter = Tree.DIV;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 7: {
-                //# line 332
+                //# line 333
                 params[0].counter = Tree.MOD;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 8: {
-                //# line 165
+                //# line 166
                 params[0].vlist = new ArrayList<VarDef>();
                 params[0].vlist.add(params[1].vdef);
                 if (params[2].vlist != null) {
@@ -1346,29 +1359,29 @@ public class Table
                 return;
             }
             case 9: {
-                //# line 155
+                //# line 156
                 params[0].vlist = params[1].vlist;
                 return;
             }
             case 10: {
-                //# line 159
+                //# line 160
                 params[0].vlist = new ArrayList<VarDef>();
                 return;
             }
             case 11: {
-                //# line 339
+                //# line 340
                 params[0].counter = Tree.NEG;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 12: {
-                //# line 344
+                //# line 345
                 params[0].counter = Tree.NOT;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 13: {
-                //# line 542
+                //# line 543
                 params[0].expr = params[1].expr;
                 params[0].loc = params[1].loc;
                 if (params[2].vec != null) {
@@ -1387,19 +1400,19 @@ public class Table
                 return;
             }
             case 14: {
-                //# line 650
+                //# line 651
                 params[0].expr = params[3].expr;
                 params[0].counter = 1 + params[3].counter;
                 return;
             }
             case 15: {
-                //# line 655
+                //# line 656
                 params[0].expr = params[1].expr;
                 params[0].counter = 0;
                 return;
             }
             case 16: {
-                //# line 387
+                //# line 388
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1410,13 +1423,13 @@ public class Table
                 return;
             }
             case 17: {
-                //# line 269
+                //# line 270
                 params[0].counter = Tree.AND;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 18: {
-                //# line 503
+                //# line 504
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1427,12 +1440,12 @@ public class Table
                 return;
             }
             case 19: {
-                //# line 727
+                //# line 728
                 params[0].stmt = new Tree.Break(params[1].loc);
                 return;
             }
             case 20: {
-                //# line 399
+                //# line 400
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1451,7 +1464,7 @@ public class Table
                 return;
             }
             case 22: {
-                //# line 192
+                //# line 193
                 params[0].slist.add(params[1].stmt);
                 params[0].slist.addAll(params[2].slist);
                 return;
@@ -1461,17 +1474,17 @@ public class Table
                 return;
             }
             case 24: {
-                //# line 674
+                //# line 675
                 params[0].expr = new Tree.Literal(params[1].typeTag, params[1].literal, params[1].loc);
                 return;
             }
             case 25: {
-                //# line 678
+                //# line 679
                 params[0].expr = new Null(params[1].loc);
                 return;
             }
             case 26: {
-                //# line 175
+                //# line 176
                 params[0].vlist = new ArrayList<VarDef>();
                 params[0].vlist.add(params[2].vdef);
                 if (params[3].vlist != null) {
@@ -1484,37 +1497,37 @@ public class Table
                 return;
             }
             case 28: {
-                //# line 759
+                //# line 760
                 params[0].stmt = new Tree.Print(params[3].elist, params[1].loc);
                 return;
             }
             case 29: {
-                //# line 721
+                //# line 722
                 params[0].stmt = new Tree.ForLoop(params[3].stmt, params[5].expr, params[7].stmt, params[9].stmt, params[1].loc);
                 return;
             }
             case 30: {
-                //# line 594
+                //# line 595
                 params[0].expr = params[1].expr;
                 return;
             }
             case 31: {
-                //# line 598
+                //# line 599
                 params[0].expr = new Tree.ReadIntExpr(params[1].loc);
                 return;
             }
             case 32: {
-                //# line 602
+                //# line 603
                 params[0].expr = new Tree.ReadLineExpr(params[1].loc);
                 return;
             }
             case 33: {
-                //# line 606
+                //# line 607
                 params[0].expr = new Tree.ThisExpr(params[1].loc);
                 return;
             }
             case 34: {
-                //# line 610
+                //# line 611
                 if (params[2].ident != null) {
                     params[0].expr = new Tree.NewClass(params[2].ident, params[1].loc);
                 } else {
@@ -1523,17 +1536,17 @@ public class Table
                 return;
             }
             case 35: {
-                //# line 618
+                //# line 619
                 params[0].expr = new Tree.TypeTest(params[3].expr, params[5].ident, params[1].loc);
                 return;
             }
             case 36: {
-                //# line 622
+                //# line 623
                 params[0].expr = params[2].expr;
                 return;
             }
             case 37: {
-                //# line 626
+                //# line 627
                 if (params[2].elist != null) {
                     params[0].expr = new Tree.CallExpr(null, params[1].ident, params[2].elist, params[1].loc);
                 } else {
@@ -1542,7 +1555,7 @@ public class Table
                 return;
             }
             case 38: {
-                //# line 358
+                //# line 359
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1553,13 +1566,13 @@ public class Table
                 return;
             }
             case 39: {
-                //# line 262
+                //# line 263
                 params[0].counter = Tree.OR;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 40: {
-                //# line 739
+                //# line 740
                 params[0].stmt = params[2].stmt;
                 return;
             }
@@ -1568,7 +1581,7 @@ public class Table
                 return;
             }
             case 42: {
-                //# line 115
+                //# line 116
                 params[0].flist = new ArrayList<Tree>();
                 if (params[1].vdef != null) {
                     params[0].flist.add(params[1].vdef);
@@ -1579,56 +1592,56 @@ public class Table
                 return;
             }
             case 43: {
-                //# line 125
+                //# line 126
                 params[0].flist = new ArrayList<Tree>();
                 return;
             }
             case 44: {
-                //# line 702
+                //# line 703
                 params[0].elist = new ArrayList<Tree.Expr>();
                 params[0].elist.add(params[2].expr);
                 params[0].elist.addAll(params[3].elist);
                 return;
             }
             case 45: {
-                //# line 708
+                //# line 709
                 params[0].elist = new ArrayList<Tree.Expr>();
                 return;
             }
             case 46: {
-                //# line 662
+                //# line 663
                 params[0].expr = params[1].expr;
                 return;
             }
             case 47: {
-                //# line 666
+                //# line 667
                 params[0].expr = new Tree.TypeCast(params[2].ident, params[4].expr, params[4].loc);
                 return;
             }
             case 48: {
-                //# line 102
+                //# line 103
                 params[0].cdef = new Tree.ClassDef(params[2].ident, params[3].ident, params[5].flist, params[1].loc);
                 return;
             }
             case 49: {
-                //# line 746
+                //# line 747
                 params[0].stmt = new Tree.Return(params[2].expr, params[1].loc);
                 return;
             }
             case 50: {
-                //# line 694
+                //# line 695
                 params[0].elist = new ArrayList<Tree.Expr>();
                 params[0].elist.add(params[1].expr);
                 params[0].elist.addAll(params[2].elist);
                 return;
             }
             case 51: {
-                //# line 186
+                //# line 187
                 params[0].stmt = new Tree.Block(params[2].slist, params[1].loc);
                 return;
             }
             case 52: {
-                //# line 147
+                //# line 148
                 params[0].vlist = params[2].vlist;
                 params[0].stmt = params[4].stmt;
                 return;
@@ -1638,7 +1651,7 @@ public class Table
                 return;
             }
             case 54: {
-                //# line 587
+                //# line 588
                 params[0].elist = params[2].elist;
                 return;
             }
@@ -1647,7 +1660,7 @@ public class Table
                 return;
             }
             case 56: {
-                //# line 27
+                //# line 28
                 params[0].clist = new ArrayList<ClassDef>();
                 params[0].clist.add(params[1].cdef);
                 if (params[2].clist != null) {
@@ -1657,12 +1670,12 @@ public class Table
                 return;
             }
             case 57: {
-                //# line 352
+                //# line 353
                 params[0].expr = params[1].expr;
                 return;
             }
             case 58: {
-                //# line 83
+                //# line 84
                 params[0].type = params[1].type;
                 for (int i = 0; i < params[2].counter; ++i) {
                     params[0].type = new Tree.TypeArray(params[0].type, params[1].loc);
@@ -1670,7 +1683,7 @@ public class Table
                 return;
             }
             case 59: {
-                //# line 474
+                //# line 475
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1681,12 +1694,12 @@ public class Table
                 return;
             }
             case 60: {
-                //# line 636
+                //# line 637
                 params[0].ident = params[1].ident;
                 return;
             }
             case 61: {
-                //# line 640
+                //# line 641
                 params[0].type = params[1].type;
                 for (int i = 0; i < params[3].counter; ++i) {
                     params[0].type = new Tree.TypeArray(params[0].type, params[1].loc);
@@ -1695,7 +1708,7 @@ public class Table
                 return;
             }
             case 62: {
-                //# line 253
+                //# line 254
                 params[0].loc = params[1].loc;
                 params[0].expr = params[2].expr;
                 return;
@@ -1705,7 +1718,7 @@ public class Table
                 return;
             }
             case 64: {
-                //# line 108
+                //# line 109
                 params[0].ident = params[2].ident;
                 return;
             }
@@ -1714,29 +1727,29 @@ public class Table
                 return;
             }
             case 66: {
-                //# line 310
+                //# line 311
                 params[0].counter = Tree.PLUS;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 67: {
-                //# line 315
+                //# line 316
                 params[0].counter = Tree.MINUS;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 68: {
-                //# line 92
+                //# line 93
                 params[0].counter = 1 + params[3].counter;
                 return;
             }
             case 69: {
-                //# line 96
+                //# line 97
                 params[0].counter = 0;
                 return;
             }
             case 70: {
-                //# line 416
+                //# line 417
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1747,22 +1760,22 @@ public class Table
                 return;
             }
             case 71: {
-                //# line 684
+                //# line 685
                 params[0].elist = params[1].elist;
                 return;
             }
             case 72: {
-                //# line 688
+                //# line 689
                 params[0].elist = new ArrayList<Tree.Expr>();
                 return;
             }
             case 73: {
-                //# line 55
+                //# line 56
                 params[0].vdef = new Tree.VarDef(params[2].ident, params[1].type, params[2].loc);
                 return;
             }
             case 74: {
-                //# line 428
+                //# line 429
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1781,12 +1794,12 @@ public class Table
                 return;
             }
             case 76: {
-                //# line 200
+                //# line 201
                 params[0].stmt = params[1].vdef;
                 return;
             }
             case 77: {
-                //# line 204
+                //# line 205
                 if (params[1].stmt == null) {
                     params[0].stmt = new Tree.Skip(params[2].loc);
                 } else {
@@ -1795,42 +1808,42 @@ public class Table
                 return;
             }
             case 78: {
-                //# line 212
+                //# line 213
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 79: {
-                //# line 216
+                //# line 217
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 80: {
-                //# line 220
+                //# line 221
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 81: {
-                //# line 224
+                //# line 225
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 82: {
-                //# line 228
+                //# line 229
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 83: {
-                //# line 232
+                //# line 233
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 84: {
-                //# line 236
+                //# line 237
                 params[0].stmt = params[1].stmt;
                 return;
             }
             case 85: {
-                //# line 242
+                //# line 243
                 if (params[2].expr == null) {
                     params[0].stmt = new Tree.Calculate(params[1].expr, params[1].loc);
                 } else {
@@ -1843,37 +1856,37 @@ public class Table
                 return;
             }
             case 87: {
-                //# line 61
+                //# line 62
                 params[0].type = new Tree.TypeIdent(Tree.INT, params[1].loc);
                 return;
             }
             case 88: {
-                //# line 65
+                //# line 66
                 params[0].type = new Tree.TypeIdent(Tree.VOID, params[1].loc);
                 return;
             }
             case 89: {
-                //# line 69
+                //# line 70
                 params[0].type = new Tree.TypeIdent(Tree.BOOL, params[1].loc);
                 return;
             }
             case 90: {
-                //# line 73
+                //# line 74
                 params[0].type = new Tree.TypeIdent(Tree.STRING, params[1].loc);
                 return;
             }
             case 91: {
-                //# line 77
+                //# line 78
                 params[0].type = new Tree.TypeClass(params[2].ident, params[1].loc);
                 return;
             }
             case 92: {
-                //# line 715
+                //# line 716
                 params[0].stmt = new Tree.WhileLoop(params[3].expr, params[5].stmt, params[1].loc);
                 return;
             }
             case 93: {
-                //# line 370
+                //# line 371
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1892,7 +1905,7 @@ public class Table
                 return;
             }
             case 95: {
-                //# line 445
+                //# line 446
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1903,7 +1916,7 @@ public class Table
                 return;
             }
             case 96: {
-                //# line 457
+                //# line 458
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1922,7 +1935,7 @@ public class Table
                 return;
             }
             case 98: {
-                //# line 752
+                //# line 753
                 params[0].expr = params[1].expr;
                 return;
             }
@@ -1931,12 +1944,12 @@ public class Table
                 return;
             }
             case 100: {
-                //# line 733
+                //# line 734
                 params[0].stmt = new Tree.If(params[3].expr, params[5].stmt, params[6].stmt, params[1].loc);
                 return;
             }
             case 101: {
-                //# line 515
+                //# line 516
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1955,7 +1968,7 @@ public class Table
                 return;
             }
             case 103: {
-                //# line 562
+                //# line 563
                 SemValue sem = new SemValue();
                 sem.expr = params[2].expr;
                 params[0].vec = new Vector<SemValue>();
@@ -1966,7 +1979,7 @@ public class Table
                 return;
             }
             case 104: {
-                //# line 572
+                //# line 573
                 SemValue sem = new SemValue();
                 sem.ident = params[2].ident;
                 sem.loc = params[2].loc;
@@ -1983,17 +1996,17 @@ public class Table
                 return;
             }
             case 106: {
-                //# line 532
+                //# line 533
                 params[0].expr = new Tree.Unary(params[1].counter, params[2].expr, params[1].loc);
                 return;
             }
             case 107: {
-                //# line 536
+                //# line 537
                 params[0].expr = params[1].expr;
                 return;
             }
             case 108: {
-                //# line 38
+                //# line 39
                 params[0].clist = new ArrayList<ClassDef>();
                 params[0].clist.add(params[1].cdef);
                 if (params[2].clist != null) {
@@ -2006,37 +2019,37 @@ public class Table
                 return;
             }
             case 110: {
-                //# line 288
+                //# line 289
                 params[0].counter = Tree.LE;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 111: {
-                //# line 293
+                //# line 294
                 params[0].counter = Tree.GE;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 112: {
-                //# line 298
+                //# line 299
                 params[0].counter = Tree.LT;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 113: {
-                //# line 303
+                //# line 304
                 params[0].counter = Tree.GT;
                 params[0].loc = params[1].loc;
                 return;
             }
             case 114: {
-                //# line 131
+                //# line 132
                 params[0].fdef = new Tree.MethodDef(true, params[3].ident, params[2].type, params[5].vlist,
                     (Block) params[7].stmt, params[3].loc);
                 return;
             }
             case 115: {
-                //# line 136
+                //# line 137
                 if (params[3].vlist != null) {
                     params[0].fdef = new Tree.MethodDef(false, params[2].ident, params[1].type, params[3].vlist,
                         (Block) params[3].stmt, params[2].loc);

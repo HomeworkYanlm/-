@@ -23,24 +23,31 @@ def read_txt_file(filename):
 def main():
     decaf_jar = os.path.join('..', '..', 'result', 'decaf.jar')
     names = sys.argv[1:]
+    flag = 1;
     if not names:
         names = sorted(os.listdir('.'))
     for name in names:
-        bname,ext = os.path.splitext(name)
-        if ext != '.decaf':
-            continue
-        # Run the test case, redirecting stdout/stderr to output/bname.result
-        subprocess.call(['java', '-jar', decaf_jar, '-l', '0', name],
-                stdout=open(os.path.join('output', bname + '.result'), 'w+'),
-                stderr=subprocess.STDOUT)
-        # Check the result
-        expected = read_txt_file(os.path.join('result',bname+'.result'))
-        actual = read_txt_file(os.path.join('output',bname+'.result'))
-        if expected == actual:
-            info = 'OK :)'
-        else:
-            info = 'ERROR!'
-        print('{0:<30}{1}'.format(name,info))
+        if name == "complex-cast.decaf":
+            bname,ext = os.path.splitext(name)
+            if ext != '.decaf':
+                continue
+            # Run the test case, redirecting stdout/stderr to output/bname.result
+            subprocess.call(['java', '-jar', decaf_jar, '-l', '0', name],
+                    stdout=open(os.path.join('output', bname + '.result'), 'w+'),
+                    stderr=subprocess.STDOUT)
+            # Check the result
+            expected = read_txt_file(os.path.join('result',bname+'.result'))
+            actual = read_txt_file(os.path.join('output',bname+'.result'))
+            if flag == 1:
+                print expected;
+                print "--.--.--.--.--.--.--.--.--.--."
+                print actual;
+
+            if expected == actual:
+                info = 'OK :)'
+            else:
+                info = 'ERROR!'
+            print('{0:<30}{1}'.format(name,info))
     if os.name == 'nt':
         print('Press Enter to continue...')
         try:
