@@ -1,10 +1,38 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:92)
-	at decaf.frontend.Parser.parse(Parser.java:92)
-	at decaf.frontend.Parser.parse(Parser.java:92)
-	at decaf.frontend.Parser.parse(Parser.java:92)
-	at decaf.frontend.Parser.parse(Parser.java:92)
-	at decaf.frontend.Parser.parseFile(Parser.java:126)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+program
+    class Main <empty>
+        static func main voidtype
+            formals
+            stmtblock
+                vardef x comptype
+                assign
+                    varref x
+                    neg
+                        imgconst 1j
+                vardef re inttype
+                vardef im inttype
+                assign
+                    varref re
+                    re
+                        varref x
+                assign
+                    varref im
+                    im
+                        varref x
+                print
+                    varref re
+                    stringconst "+"
+                    varref im
+                    stringconst "j\n"
+                vardef y inttype
+                assign
+                    varref y
+                    intconst 1024
+                vardef z comptype
+                assign
+                    varref z
+                    compcast
+                        varref y
+                printcomp
+                    add
+                        varref z
+                        varref y

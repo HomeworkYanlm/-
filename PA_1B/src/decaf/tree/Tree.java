@@ -15,7 +15,7 @@ import decaf.utils.MiscUtils;
 
 /**
  * Root class for abstract syntax tree nodes. It provide assign
- *  definitions for specific tree nodes as subclasses nested inside imgconst cond print Expr Case Call Copy DO SubS
+ *  definitions for specific tree nodes as subclasses nested inside imgconst cond print Expr Case Call Copy DO SubS re
  *  There are 40 such subclasses.
  *
  *  Each subclass is highly standardized.  It generally contains only tree
@@ -876,11 +876,19 @@ public abstract class Tree {
         pw.println("cond");
         pw.incIndent();
         condition.printTo(pw);
-        pw.println("cases");
-        pw.incIndent();
-        for (CaseExpr e : caseboday) {
-          e.printTo(pw);
+        if (caseboday == null) 
+        {
+          pw.println("cases");
+          pw.incIndent();
+        }else
+        {
+          pw.println("cases");
+          pw.incIndent();
+          for (CaseExpr e : caseboday) {
+            e.printTo(pw);
+          }
         }
+        
         deft.printTo(pw);
         pw.decIndent();
         pw.decIndent();
@@ -1071,18 +1079,19 @@ public abstract class Tree {
             switch (tag) {
             case NEG:
                 unaryOperatorToString(pw, "neg");
-        case RE:
-          unaryOperatorToString(pw, "re");
                 break;
-        case IM:
-          unaryOperatorToString(pw, "im");
-          break;
+            case RE:
+              unaryOperatorToString(pw, "re");
+                    break;
+            case IM:
+              unaryOperatorToString(pw, "im");
+              break;
             case NOT:
-                unaryOperatorToString(pw, "not");
-          break;
-        case TR:
-          unaryOperatorToString(pw, "compcast");
-                break;
+                    unaryOperatorToString(pw, "not");
+              break;
+            case TR:
+              unaryOperatorToString(pw, "compcast");
+                    break;
             }
         }
    }

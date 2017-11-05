@@ -68,7 +68,7 @@
 
   48  DefaultExpr : DEFULT ':' Expr ';'
 
-  49  ACaseExprlist : ACaseExprlist ACaseExpr
+  49  ACaseExprlist : ACaseExpr ACaseExprlist
   50                |
 
   51  Super : SUPER '.' IDENTIFIER '(' Actuals ')'
@@ -3965,15 +3965,19 @@ state 201
 	Expr : CASE '(' Expr ')' '{' . ACaseExprlist DefaultExpr '}'  (56)
 	ACaseExprlist : .  (50)
 
-	.  reduce 50
+	NULL  shift 47
+	LITERAL  shift 58
+	DEFULT  reduce 50
 
-	ACaseExprlist  goto 209
+	ACaseExpr  goto 209
+	Constant  goto 210
+	ACaseExprlist  goto 211
 
 
 state 202
 	Super : SUPER '.' IDENTIFIER '(' Actuals . ')'  (51)
 
-	')'  shift 210
+	')'  shift 212
 	.  error
 
 
@@ -4014,7 +4018,7 @@ state 205
 	IDENTIFIER  reduce 43
 	')'  reduce 41
 
-	SimpleStmt  goto 211
+	SimpleStmt  goto 213
 	LValue  goto 84
 	Expr  goto 85
 	Call  goto 86
@@ -4067,7 +4071,7 @@ state 206
 	Variable  goto 21
 	Type  goto 34
 	StmtBlock  goto 74
-	Stmt  goto 212
+	Stmt  goto 214
 	SimpleStmt  goto 76
 	IfStmt  goto 77
 	DoStmt  goto 78
@@ -4097,66 +4101,105 @@ state 208
 
 
 state 209
-	ACaseExprlist : ACaseExprlist . ACaseExpr  (49)
-	Expr : CASE '(' Expr ')' '{' ACaseExprlist . DefaultExpr '}'  (56)
+	ACaseExprlist : ACaseExpr . ACaseExprlist  (49)
+	ACaseExprlist : .  (50)
 
 	NULL  shift 47
 	LITERAL  shift 58
-	DEFULT  shift 213
-	.  error
+	DEFULT  reduce 50
 
-	ACaseExpr  goto 214
-	Constant  goto 215
-	DefaultExpr  goto 216
+	ACaseExpr  goto 209
+	Constant  goto 210
+	ACaseExprlist  goto 215
 
 
 state 210
+	ACaseExpr : Constant . ':' Expr ';'  (47)
+
+	':'  shift 216
+	.  error
+
+
+state 211
+	Expr : CASE '(' Expr ')' '{' ACaseExprlist . DefaultExpr '}'  (56)
+
+	DEFULT  shift 217
+	.  error
+
+	DefaultExpr  goto 218
+
+
+state 212
 	Super : SUPER '.' IDENTIFIER '(' Actuals ')' .  (51)
 
 	.  reduce 51
 
 
-state 211
+state 213
 	ForStmt : FOR '(' SimpleStmt ';' Expr ';' SimpleStmt . ')' Stmt  (97)
 
-	')'  shift 217
+	')'  shift 219
 	.  error
 
 
-state 212
+state 214
 	ElseClause : ELSE Stmt .  (100)
 
 	.  reduce 100
 
 
-state 213
-	DefaultExpr : DEFULT . ':' Expr ';'  (48)
-
-	':'  shift 218
-	.  error
-
-
-state 214
-	ACaseExprlist : ACaseExprlist ACaseExpr .  (49)
+state 215
+	ACaseExprlist : ACaseExpr ACaseExprlist .  (49)
 
 	.  reduce 49
 
 
-state 215
-	ACaseExpr : Constant . ':' Expr ';'  (47)
-
-	':'  shift 219
-	.  error
-
-
 state 216
-	Expr : CASE '(' Expr ')' '{' ACaseExprlist DefaultExpr . '}'  (56)
+	ACaseExpr : Constant ':' . Expr ';'  (47)
+	Receiver : .  (43)
 
-	'}'  shift 220
-	.  error
+	NULL  shift 47
+	THIS  shift 48
+	NEW  shift 54
+	READ_INTEGER  shift 56
+	READ_LINE  shift 57
+	LITERAL  shift 58
+	INSTANCEOF  shift 59
+	'-'  shift 60
+	'!'  shift 61
+	'('  shift 62
+	CASE  shift 64
+	SUPER  shift 66
+	DCOPY  shift 67
+	SCOPY  shift 68
+	'@'  shift 70
+	'$'  shift 71
+	'#'  shift 72
+	IDENTIFIER  reduce 43
+
+	LValue  goto 93
+	Expr  goto 220
+	Call  goto 95
+	Super  goto 96
+	Receiver  goto 88
+	Constant  goto 89
 
 
 state 217
+	DefaultExpr : DEFULT . ':' Expr ';'  (48)
+
+	':'  shift 221
+	.  error
+
+
+state 218
+	Expr : CASE '(' Expr ')' '{' ACaseExprlist DefaultExpr . '}'  (56)
+
+	'}'  shift 222
+	.  error
+
+
+state 219
 	ForStmt : FOR '(' SimpleStmt ';' Expr ';' SimpleStmt ')' . Stmt  (97)
 	SimpleStmt : .  (41)
 	Receiver : .  (43)
@@ -4200,7 +4243,7 @@ state 217
 	Variable  goto 21
 	Type  goto 34
 	StmtBlock  goto 74
-	Stmt  goto 221
+	Stmt  goto 223
 	SimpleStmt  goto 76
 	IfStmt  goto 77
 	DoStmt  goto 78
@@ -4217,84 +4260,10 @@ state 217
 	Constant  goto 89
 
 
-state 218
-	DefaultExpr : DEFULT ':' . Expr ';'  (48)
-	Receiver : .  (43)
-
-	NULL  shift 47
-	THIS  shift 48
-	NEW  shift 54
-	READ_INTEGER  shift 56
-	READ_LINE  shift 57
-	LITERAL  shift 58
-	INSTANCEOF  shift 59
-	'-'  shift 60
-	'!'  shift 61
-	'('  shift 62
-	CASE  shift 64
-	SUPER  shift 66
-	DCOPY  shift 67
-	SCOPY  shift 68
-	'@'  shift 70
-	'$'  shift 71
-	'#'  shift 72
-	IDENTIFIER  reduce 43
-
-	LValue  goto 93
-	Expr  goto 222
-	Call  goto 95
-	Super  goto 96
-	Receiver  goto 88
-	Constant  goto 89
-
-
-state 219
-	ACaseExpr : Constant ':' . Expr ';'  (47)
-	Receiver : .  (43)
-
-	NULL  shift 47
-	THIS  shift 48
-	NEW  shift 54
-	READ_INTEGER  shift 56
-	READ_LINE  shift 57
-	LITERAL  shift 58
-	INSTANCEOF  shift 59
-	'-'  shift 60
-	'!'  shift 61
-	'('  shift 62
-	CASE  shift 64
-	SUPER  shift 66
-	DCOPY  shift 67
-	SCOPY  shift 68
-	'@'  shift 70
-	'$'  shift 71
-	'#'  shift 72
-	IDENTIFIER  reduce 43
-
-	LValue  goto 93
-	Expr  goto 223
-	Call  goto 95
-	Super  goto 96
-	Receiver  goto 88
-	Constant  goto 89
-
-
 state 220
-	Expr : CASE '(' Expr ')' '{' ACaseExprlist DefaultExpr '}' .  (56)
-
-	.  reduce 56
-
-
-state 221
-	ForStmt : FOR '(' SimpleStmt ';' Expr ';' SimpleStmt ')' Stmt .  (97)
-
-	.  reduce 97
-
-
-state 222
 	Receiver : Expr . '.'  (42)
 	LValue : Expr . '[' Expr ']'  (45)
-	DefaultExpr : DEFULT ':' Expr . ';'  (48)
+	ACaseExpr : Constant ':' Expr . ';'  (47)
 	Expr : Expr . '+' Expr  (57)
 	Expr : Expr . '-' Expr  (58)
 	Expr : Expr . '*' Expr  (59)
@@ -4328,10 +4297,59 @@ state 222
 	.  error
 
 
+state 221
+	DefaultExpr : DEFULT ':' . Expr ';'  (48)
+	Receiver : .  (43)
+
+	NULL  shift 47
+	THIS  shift 48
+	NEW  shift 54
+	READ_INTEGER  shift 56
+	READ_LINE  shift 57
+	LITERAL  shift 58
+	INSTANCEOF  shift 59
+	'-'  shift 60
+	'!'  shift 61
+	'('  shift 62
+	CASE  shift 64
+	SUPER  shift 66
+	DCOPY  shift 67
+	SCOPY  shift 68
+	'@'  shift 70
+	'$'  shift 71
+	'#'  shift 72
+	IDENTIFIER  reduce 43
+
+	LValue  goto 93
+	Expr  goto 225
+	Call  goto 95
+	Super  goto 96
+	Receiver  goto 88
+	Constant  goto 89
+
+
+state 222
+	Expr : CASE '(' Expr ')' '{' ACaseExprlist DefaultExpr '}' .  (56)
+
+	.  reduce 56
+
+
 state 223
+	ForStmt : FOR '(' SimpleStmt ';' Expr ';' SimpleStmt ')' Stmt .  (97)
+
+	.  reduce 97
+
+
+state 224
+	ACaseExpr : Constant ':' Expr ';' .  (47)
+
+	.  reduce 47
+
+
+state 225
 	Receiver : Expr . '.'  (42)
 	LValue : Expr . '[' Expr ']'  (45)
-	ACaseExpr : Constant ':' Expr . ';'  (47)
+	DefaultExpr : DEFULT ':' Expr . ';'  (48)
 	Expr : Expr . '+' Expr  (57)
 	Expr : Expr . '-' Expr  (58)
 	Expr : Expr . '*' Expr  (59)
@@ -4360,21 +4378,15 @@ state 223
 	'>'  shift 133
 	'<'  shift 134
 	'.'  shift 135
-	';'  shift 225
+	';'  shift 226
 	'['  shift 136
 	.  error
 
 
-state 224
+state 226
 	DefaultExpr : DEFULT ':' Expr ';' .  (48)
 
 	.  reduce 48
-
-
-state 225
-	ACaseExpr : Constant ':' Expr ';' .  (47)
-
-	.  reduce 47
 
 
 State 113 contains 15 shift/reduce conflicts.
@@ -4383,4 +4395,4 @@ State 115 contains 15 shift/reduce conflicts.
 
 
 65 terminals, 38 nonterminals
-106 grammar rules, 226 states
+106 grammar rules, 227 states

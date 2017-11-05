@@ -1045,6 +1045,7 @@ public abstract class Tree {
     		switch (tag) {
     		case NEG:
     			unaryOperatorToString(pw, "neg");
+          break;
         case RE:
           unaryOperatorToString(pw, "re");
     			break;

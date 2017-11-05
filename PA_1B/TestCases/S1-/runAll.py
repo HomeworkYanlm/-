@@ -23,11 +23,16 @@ def read_txt_file(filename):
 def main():
     decaf_jar = os.path.join('..', '..', 'result', 'decaf.jar')
     names = sys.argv[1:]
-    flag = 1;
+    flag = 0;
     if not names:
         names = sorted(os.listdir('.'))
     for name in names:
-        if name == "complex-cast.decaf":
+        if name == "case-week.decaf":
+            flag = 1;
+        else:
+            flag = 0;
+        if name != "!case-week.decaf":
+#             flag = 1;
             bname,ext = os.path.splitext(name)
             if ext != '.decaf':
                 continue
@@ -39,9 +44,11 @@ def main():
             expected = read_txt_file(os.path.join('result',bname+'.result'))
             actual = read_txt_file(os.path.join('output',bname+'.result'))
             if flag == 1:
+                print ">>>>>>>>>";
                 print expected;
                 print "--.--.--.--.--.--.--.--.--.--."
                 print actual;
+                print "<<<<<<<<<";
 
             if expected == actual:
                 info = 'OK :)'

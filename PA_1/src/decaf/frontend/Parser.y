@@ -1,7 +1,7 @@
 /*
  * 本文件提供实现Decaf编译器所需要的BYACC脚本。 Call
  * 在第一阶段中你需要补充完整这个文件中的语法规则。
- * 请参考"YACC--Yet Another Compiler Compiler"中关于如何编写BYACC脚本的说明。 '{'} Case
+ * 请参考"YACC--Yet Another Compiler Compiler"中关于如何编写BYACC脚本的说明。 '{'} Case RE
  * 
  * Keltin Leung
  * DCST, Tsinghua University
@@ -271,7 +271,7 @@ DefaultExpr     :   DEFULT ':' Expr ';'
                 }
                 ;
 
-ACaseExprlist   :   ACaseExprlist ACaseExpr
+ACaseExprlist   :  ACaseExpr ACaseExprlist 
                 {
                     $$.celist.add($2.cexpr);
                 }
@@ -396,7 +396,7 @@ Expr            :	LValue
                     } 
                 |   '@' Expr
                     {
-                        $$.expr = new Tree.Unary(Tree.RE, $2.expr, $1.loc);
+                       $$.expr = new Tree.Unary(Tree.RE, $2.expr, $1.loc);
                     }
                 |   '$' Expr
                     {

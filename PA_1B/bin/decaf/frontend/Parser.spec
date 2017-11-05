@@ -19,8 +19,8 @@ PRINT  READ_INTEGER         READ_LINE
 LITERAL
 IDENTIFIER   AND      OR    STATIC  INSTANCEOF
 LESS_EQUAL   GREATER_EQUAL  EQUAL   NOT_EQUAL
-'+'  '-'  '*'  '/'  '%'  '='  '>'  '<'  '.'
-','  ';'  '!'  '('  ')'  '['  ']'  '{'  '}'
+':' '+'  '-'  '*'  '@'  '#'  '$'  '/'  '%'  '='  '>'  '<' 
+'.'  ','  ';'  '!'  '('  ')'  '['  ']'  '{'  '}'
 
 %%
 
@@ -66,6 +66,10 @@ SimpleType      :   INT
                     {
                         $$.type = new Tree.TypeIdent(Tree.VOID, $1.loc);
                     }
+                |   COMPLEX
+                		{
+                			 $$.type = new Tree.TypeIdent(Tree.COMPLEX, $1.loc);
+                		}
                 |   BOOL
                     {
                         $$.type = new Tree.TypeIdent(Tree.BOOL, $1.loc);
@@ -346,6 +350,21 @@ Oper7           :   '-'
                         $$.counter = Tree.NOT;
                         $$.loc = $1.loc;
                     }
+                |   '@'
+            		{
+            			$$.counter = Tree.RE;
+                    $$.loc = $1.loc;
+            		}
+            	|   '#'
+            		{
+            			$$.counter = Tree.TR;
+                    $$.loc = $1.loc;
+            		}
+            	|   '$'
+            		{
+            			$$.counter = Tree.IM;
+                    $$.loc = $1.loc;
+            		}
                 ;
 
 // expressions
@@ -631,6 +650,11 @@ Expr9           :   Constant
                             $$.expr = new Tree.Ident(null, $1.ident, $1.loc);
                         }
                     }
+                 |   CASE '('Expr')' '{' ACaseExprlist DefaultExpr'}'
+                    {
+
+                        $$.expr = new Tree.Case($3.expr,  null ,$7.dfexpr ,$1.loc);
+                    }
                 ;
 
 AfterNewExpr    :   IDENTIFIER '(' ')'
@@ -668,6 +692,35 @@ AfterParenExpr  :   Expr ')'
                         $$.expr = new Tree.TypeCast($2.ident, $4.expr, $4.loc);
                     }
                 ;
+               
+
+DefaultExpr     :   DEFULT ':' Expr ';'
+                {
+
+                    System.out.println("fuck");
+                   
+                    $$.dfexpr = new Tree.DfExpr($3.expr,$1.loc);
+                }
+                ;
+
+ACaseExpr       :   Constant':' Expr';'
+                {
+                    $$.cexpr = new Tree.CaseExpr($1.expr,$3.expr,$1.loc);
+                }
+                ;
+
+ACaseExprlist   :  ACaseExpr ACaseExprlist 
+                {
+                    System.out.println("fucku");
+                    $$.celist.add($2.cexpr);
+                    System.out.println("fucku!!");
+                }
+                |  
+                {
+                    $$ = new SemValue();
+                    $$.celist = new ArrayList<CaseExpr>();
+                }
+                ;
 
 // end of expressions
 
@@ -691,6 +744,7 @@ Actuals         :   ExprList
                     }
                 ;
 
+
 ExprList        :   Expr SubExprList
                     {
                         $$.elist = new ArrayList<Tree.Expr>();
@@ -710,6 +764,9 @@ SubExprList     :   ',' Expr SubExprList
                         $$.elist = new ArrayList<Tree.Expr>();
                     }
                 ;
+
+
+
 
 // statements
 WhileStmt       :   WHILE '(' Expr ')' Stmt
@@ -759,5 +816,9 @@ ReturnExpr      :   Expr
 PrintStmt       :   PRINT '(' ExprList ')'
                     {
                         $$.stmt = new Tree.Print($3.elist, $1.loc);
+                    }
+                |   PRINTCOMP'(' ExprList ')'
+                    {
+                        $$.stmt = new Tree.PrintComp($3.elist, $1.loc);
                     }
                 ;
