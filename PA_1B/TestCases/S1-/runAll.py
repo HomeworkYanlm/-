@@ -24,13 +24,16 @@ def main():
     decaf_jar = os.path.join('..', '..', 'result', 'decaf.jar')
     names = sys.argv[1:]
     flag = 0;
+    tarname = "do-case.decaf";
+
     if not names:
         names = sorted(os.listdir('.'))
+        
     for name in names:
-        if name == "case-week.decaf":
-            flag = 1;
-        else:
-            flag = 0;
+       # if name == tarname:
+           # flag = 1;
+        #else:
+           # flag = 0;
         if name != "!case-week.decaf":
 #             flag = 1;
             bname,ext = os.path.splitext(name)

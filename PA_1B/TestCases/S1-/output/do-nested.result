@@ -1,15 +1,43 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:84)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parse(Parser.java:95)
-	at decaf.frontend.Parser.parseFile(Parser.java:131)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+program
+    class Main <empty>
+        static func main voidtype
+            formals
+            stmtblock
+                vardef n inttype
+                vardef z comptype
+                assign
+                    varref z
+                    neg
+                        imgconst 1j
+                vardef x inttype
+                assign
+                    varref x
+                    readint
+                do
+                    branches
+                        branch
+                            les
+                                varref x
+                                intconst 1
+                            do
+                                branches
+                                    branch
+                                        les
+                                            varref x
+                                            intconst 2
+                                        do
+                                            branches
+                                                branch
+                                                    les
+                                                        varref x
+                                                        intconst 3
+                                                    assign
+                                                        varref n
+                                                        re
+                                                            varref z
+                        branch
+                            les
+                                varref x
+                                intconst 10
+                            print
+                                stringconst "2333"

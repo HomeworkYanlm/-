@@ -10,17 +10,23 @@ javafx.util.Pair
 %sem SemValue
 %start Program
 
+ 
+
 %tokens
-VOID   BOOL  INT   STRING   CLASS
-NULL   EXTENDS     THIS     WHILE   FOR
-IF     ELSE        RETURN   BREAK   NEW
-CASE OOD DDO DCOPY COMPLEX SCOPY SUPER IMAGE DEFULT DDD PRINTCOMP
-PRINT  READ_INTEGER         READ_LINE
+
+VOID      BOOL        INT                  STRING   CLASS
+NULL      EXTENDS     THIS                 WHILE    FOR
+IF        ELSE        RETURN               BREAK    NEW
+CASE      OOD         DDO                  DCOPY    COMPLEX
+SCOPY     SUPER       IMAGE                DEFULT  
+PRINTCOMP PRINT       READ_INTEGER         READ_LINE 
+
 LITERAL
 IDENTIFIER   AND      OR    STATIC  INSTANCEOF
 LESS_EQUAL   GREATER_EQUAL  EQUAL   NOT_EQUAL
 ':' '+'  '-'  '*'  '@'  '#'  '$'  '/'  '%'  '='  '>'  '<' 
 '.'  ','  ';'  '!'  '('  ')'  '['  ']'  '{'  '}'
+DDD
 
 %%
 
@@ -237,10 +243,15 @@ Stmt            :   VariableDef
                     {
                         $$.stmt = $1.stmt;
                     }
+                |   DoStmt ';'
+                    {
+                        $$.stmt = $1.stmt;
+                    }
                 |   StmtBlock
                     {
                         $$.stmt = $1.stmt;
                     }
+             
                 ;
 
 SimpleStmt      :   Expr Assignment
@@ -650,10 +661,24 @@ Expr9           :   Constant
                             $$.expr = new Tree.Ident(null, $1.ident, $1.loc);
                         }
                     }
-                 |   CASE '('Expr')' '{' ACaseExprlist DefaultExpr'}'
+                |   CASE '('Expr')' '{' ACaseExprlist DefaultExpr'}'
                     {
 
-                        $$.expr = new Tree.Case($3.expr,  null ,$7.dfexpr ,$1.loc);
+                        $$.expr = new Tree.Case($3.expr,  $6.celist ,$7.dfexpr ,$1.loc);
+                    }
+                |   DCOPY '('Expr')'
+                    {
+                        $$.expr = new Tree.CopyExpr("dcopy",$3.expr, $1.loc);
+                    }
+                |   SCOPY '('Expr')'
+                    {
+                        $$.expr = new Tree.CopyExpr("scopy",$3.expr, $1.loc);
+                    }
+                |   SUPER '.' IDENTIFIER '(' Actuals ')'
+                    {
+                        $$ = new SemValue();
+                        $$.expr = new Tree.SuperExpr($3.ident, $5.elist, $3.loc);
+                        $$.loc = $3.loc;
                     }
                 ;
 
@@ -697,7 +722,7 @@ AfterParenExpr  :   Expr ')'
 DefaultExpr     :   DEFULT ':' Expr ';'
                 {
 
-                    System.out.println("fuck");
+                   
                    
                     $$.dfexpr = new Tree.DfExpr($3.expr,$1.loc);
                 }
@@ -711,14 +736,14 @@ ACaseExpr       :   Constant':' Expr';'
 
 ACaseExprlist   :  ACaseExpr ACaseExprlist 
                 {
-                    System.out.println("fucku");
-                    $$.celist.add($2.cexpr);
-                    System.out.println("fucku!!");
+                           
+                    $$.celist = new ArrayList<Tree.CaseExpr>();
+                    $$.celist.add($1.cexpr);
+                    $$.celist.addAll($2.celist);   
                 }
                 |  
                 {
-                    $$ = new SemValue();
-                    $$.celist = new ArrayList<CaseExpr>();
+                    $$.celist = new ArrayList<Tree.CaseExpr>();
                 }
                 ;
 
@@ -764,6 +789,7 @@ SubExprList     :   ',' Expr SubExprList
                         $$.elist = new ArrayList<Tree.Expr>();
                     }
                 ;
+                
 
 
 
@@ -793,7 +819,7 @@ IfStmt          :   IF '(' Expr ')' Stmt ElseClause
                     }
                 ;
 
-ElseClause      :   ELSE Stmt // higher priority
+ElseClause      :   ELSE Stmt // higher priority This
                     {
                         $$.stmt = $2.stmt;
                     }
@@ -805,6 +831,39 @@ ReturnStmt      :   RETURN ReturnExpr
                         $$.stmt = new Tree.Return($2.expr, $1.loc);
                     }
                 ;
+                
+DoSubStmt       :   Expr ':' Stmt
+                    {
+                        $$.dstmt = new Tree.DoSubStmt($1.expr,$3.stmt,$2.loc);
+                    }
+                    ;
+DoBranch        :   DDD DoSubStmt 
+                    {
+                        $$.dstmt = $2.dstmt;
+                    }
+                    ;
+                    
+DoBranchlist    :    DoBranch DoBranchlist 
+                    {
+                         $$.Dolist = new ArrayList<Tree>();
+                         $$.Dolist.add($1.dstmt);
+                         $$.Dolist.addAll($2.Dolist);
+                    }
+                    |   /* empty */
+                    {
+                         $$.Dolist = new ArrayList<Tree>();
+                    }
+                ;
+                
+DoStmt          :   DDO DoSubStmt DoBranchlist  OOD
+                    {
+                        $$.stmt = new Tree.DoStmt($3.Dolist,$2.dstmt,$1.loc);
+                    }
+                ;
+    
+					
+
+
 
 ReturnExpr      :   Expr
                     {

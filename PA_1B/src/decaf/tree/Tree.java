@@ -796,11 +796,12 @@ public abstract class Tree {
         pw.incIndent();
         pw.println("branches");
         pw.incIndent();
+        dstmt.printTo(pw);
           for (Tree e : Trees) {
 
            e.printTo(pw);
         }
-        dstmt.printTo(pw);
+        
         pw.decIndent();
         pw.decIndent();
         
@@ -821,7 +822,7 @@ public abstract class Tree {
     public static class CaseExpr extends Expr {
       public Expr key;
       public Expr exprs;
-
+      public int info = 1;
       public CaseExpr(Expr key,Expr exprs, Location loc) {
         super(CASEEXPER, loc);
         this.key = key;

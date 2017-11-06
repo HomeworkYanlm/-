@@ -25,8 +25,15 @@ def main():
     names = sys.argv[1:]
     if not names:
         names = sorted(os.listdir('.'))
+    flag = 1;
+    tar = "case-no-default.decaf";
     for name in names:
         bname,ext = os.path.splitext(name)
+        if name == tar:
+            flag = 1;
+        else:
+            flag = 0;
+
         if ext != '.decaf':
             continue
         # Run the test case, redirecting stdout/stderr to output/bname.result
@@ -36,6 +43,14 @@ def main():
         # Check the result
         expected = read_txt_file(os.path.join('result',bname+'.result'))
         actual = read_txt_file(os.path.join('output',bname+'.result'))
+
+        if flag == 1:
+            print ">>>>>>>>>";
+            print expected;
+            print "--.--.--.--.--.--.--.--.--.--."
+            print actual;
+            print "<<<<<<<<<";
+
         if expected == actual:
             info = 'OK :)'
         else:
