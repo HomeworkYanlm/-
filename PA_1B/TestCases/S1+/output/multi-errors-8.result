@@ -1,11 +1,39 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+','
+StmtList:>',':> (3,14)
+StmtList
+------>
+StmtList
+------>
+StmtBlock
+------>
+Field
+------>
+<eos>
+FieldList
+------>
+FieldList
+------>
+ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (3,14): syntax error
+*** Error at (10,2): syntax error

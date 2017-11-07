@@ -80,25 +80,78 @@ public class Parser extends Table {
      */
     private SemValue parse(int symbol, Set<Integer> follow) {
         Pair<Integer, List<Integer>> result = query(symbol, lookahead); // get production by lookahead symbol
-        int actionId = result.getKey(); // get user-defined action
+        System.out.println(name(lookahead));
+       
+        Set<Integer>setBeign = beginSet(symbol);
+        Set<Integer>setFollow = followSet(symbol);
+        setFollow.addAll(follow);
+        Set<Integer>full = setBeign;
+        full.addAll(setFollow);
+        
+        try {
+        		
+        		int actionId = result.getKey(); // get user-defined action
+        		
+        		 List<Integer> right = result.getValue(); // right-hand side of production
+        	        int length = right.size();
+        	        SemValue[] params = new SemValue[length + 1];
 
-        List<Integer> right = result.getValue(); // right-hand side of production
-        int length = right.size();
-        SemValue[] params = new SemValue[length + 1];
+        	        for (int i = 0; i < length; i++) { // parse right-hand side symbols one by one
+        	            int term = right.get(i);
+        	            params[i + 1] = isNonTerminal(term)
+        	                    ? parse(term, follow) // for non terminals: recursively parse it
+        	                    : matchToken(term) // for terminals: match token
+        	                    ;
+        	        }
 
-        for (int i = 0; i < length; i++) { // parse right-hand side symbols one by one
-            int term = right.get(i);
-            params[i + 1] = isNonTerminal(term)
+        	        params[0] = new SemValue(); // initialize return value
+        	        act(actionId, params); // do user-defined action
+        	        return params[0];
+        } catch (Exception e) {
+        	
+        		if (name(lookahead)!="<eos>")
+         	{ 
+         		error();
+         		System.out.println(name(symbol)+":>"+name(lookahead)+":> "+lexer.getLocation());
+         	}
+        		
+        		if(setFollow.contains(lookahead))
+        		{
+        			System.out.println(name(symbol));
+        			System.out.println("!!!end");
+        			printSymbolSet(setBeign);
+        			return null;
+        		}
+        		
+        		if(setBeign.contains(lookahead))
+        		{
+        			System.out.println(">>>>>>>begin");
+        			error();
+        		}
+        		
+        		
+        		while(name(lookahead)!="<eos>"&& (full.contains(name(lookahead)) == false))
+        			lookahead = lex();
 
-            
-                    ? parse(term, follow) // for non terminals: recursively parse it
-                    : matchToken(term) // for terminals: match token
-                    ;
+        		if(setBeign.contains(lookahead))
+        		{
+        			System.out.println("begin");
+        			return parse(symbol, follow);
+        		}
+        		else if(setFollow.contains(lookahead))
+        		{
+        			
+        			return null;
+        		}
+        		else
+        		{
+        			
+        		}
+        		
         }
-
-        params[0] = new SemValue(); // initialize return value
-        act(actionId, params); // do user-defined action
-        return params[0];
+        System.out.println(name(symbol));
+        System.out.println("------>");
+        return null;
     }
 
     /**
@@ -156,10 +209,10 @@ public class Parser extends Table {
      */
     private void printSymbolList(List<Integer> list) {
         StringBuilder buf = new StringBuilder();
-        buf.append(" ");
+        buf.append("------------------------\n ");
         for (Integer i : list) {
             buf.append(name(i));
-            buf.append(" ");
+            buf.append("\n");
         }
         System.out.print(buf.toString());
     }

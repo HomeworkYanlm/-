@@ -1,16 +1,178 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+INT
+INT
+INT
+INT
+IDENTIFIER
+';'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+FOR
+FOR
+FOR
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+')'
+Expr:>')':> (7,20)
+Expr
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL THIS '(' ')' ',' '-' NEW CASE DCOPY SCOPY SUPER ':' READ_INTEGER ';' READ_LINE LITERAL ']' '=' IDENTIFIER }')'
+'{'
+'{'
+PRINT
+PRINT
+PRINT
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+IF
+IF
+IF
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+EQUAL
+EQUAL
+EQUAL
+EQUAL
+EQUAL
+EQUAL
+EQUAL
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+BREAK
+BREAK
+'}'
+'}'
+ForStmt:>'}':> (11,5)
+ForStmt
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' DDD '(' '-' ';' '{' '}' }Stmt:>'}':> (11,5)
+Stmt
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' DDD '(' '-' ';' '{' '}' }'}'
+StmtList:>'}':> (11,5)
+StmtList
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF RETURN BREAK NEW CASE DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' '(' '-' ';' '{' '}' }StmtList:>'}':> (11,5)
+StmtList
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF RETURN BREAK NEW CASE DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' '(' '-' ';' '{' '}' }StmtList:>'}':> (11,5)
+StmtList
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF RETURN BREAK NEW CASE DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' '(' '-' ';' '{' '}' }StmtBlock:>';':> (11,6)
+StmtBlock
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' STATIC INSTANCEOF '#' '$' DDD '(' '-' '{' ';' '}' }Field:>';':> (11,6)
+Field
+------>
+<eos>
+FieldList
+------>
+FieldList
+------>
+FieldList
+------>
+ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (7,20): syntax error
+*** Error at (10,9): syntax error
+*** Error at (11,5): syntax error
+*** Error at (11,6): syntax error
+*** Error at (16,2): syntax error

@@ -1,15 +1,71 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+STRING
+STRING
+STRING
+STRING
+STRING
+STRING
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+<eos>
+Expr
+------>
+Assignment
+------>
+SimpleStmt
+------>
+Stmt
+------>
+<eos>
+StmtList
+------>
+StmtList
+------>
+StmtList
+------>
+StmtBlock
+------>
+Field
+------>
+<eos>
+FieldList
+------>
+FieldList
+------>
+ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (4,13): unterminated string constant "str"
+*** Error at (4,17): syntax error

@@ -1,5 +1,7 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+IDENTIFIER
+Program:>IDENTIFIER:> (1,1)
+begin
+<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (1,1): syntax error

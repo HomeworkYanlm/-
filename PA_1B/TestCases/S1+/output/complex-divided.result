@@ -1,25 +1,130 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+COMPLEX
+COMPLEX
+COMPLEX
+COMPLEX
+COMPLEX
+COMPLEX
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'+'
+'+'
+'+'
+'+'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+IDENTIFIER
+ExprT8:>IDENTIFIER:> (6,19)
+ExprT8
+------>
+Expr8
+------>
+Expr7
+------>
+<eos>
+ExprT6
+------>
+Expr6
+------>
+<eos>
+ExprT5
+------>
+ExprT5
+------>
+Expr5
+------>
+<eos>
+ExprT4
+------>
+Expr4
+------>
+<eos>
+ExprT3
+------>
+Expr3
+------>
+<eos>
+ExprT2
+------>
+Expr2
+------>
+<eos>
+ExprT1
+------>
+Expr1
+------>
+Expr
+------>
+Assignment
+------>
+SimpleStmt
+------>
+Stmt
+------>
+<eos>
+StmtList
+------>
+StmtList
+------>
+StmtList
+------>
+StmtBlock
+------>
+Field
+------>
+<eos>
+FieldList
+------>
+FieldList
+------>
+ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (6,19): syntax error
+*** Error at (9,1): syntax error

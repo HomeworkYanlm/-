@@ -1,25 +1,461 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+STRING
+STRING
+IDENTIFIER
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+')'
+'{'
+RETURN
+RETURN
+RETURN
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+CASE
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+DEFULT
+DEFULT
+';'
+Expr:>';':> (11,22)
+Expr
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL THIS '(' ')' ',' '-' NEW CASE DCOPY SCOPY SUPER ':' READ_INTEGER ';' READ_LINE LITERAL ']' '=' IDENTIFIER }DefaultExpr:>'}':> (12,9)
+DefaultExpr
+!!!end
+{ DEFULT '}' }Expr9:>';':> (12,10)
+Expr9
+!!!end
+{ NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER '[' READ_LINE LITERAL ']' IDENTIFIER AND OR INSTANCEOF LESS_EQUAL GREATER_EQUAL EQUAL '%' NOT_EQUAL '(' ')' '*' '+' ',' '-' '.' '/' ':' ';' '<' '=' '>' }';'
+Expr8:>';':> (12,10)
+Expr8
+!!!end
+{ NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR INSTANCEOF LESS_EQUAL GREATER_EQUAL EQUAL '%' NOT_EQUAL '(' ')' '*' '+' ',' '-' '/' ':' ';' '<' '=' '>' }Expr7:>';':> (12,10)
+Expr7
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR '!' INSTANCEOF '#' LESS_EQUAL '$' GREATER_EQUAL EQUAL '%' NOT_EQUAL '(' ')' '*' '+' ',' '-' '/' ':' ';' '<' '=' '>' }';'
+Expr6:>';':> (12,10)
+Expr6
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR '!' INSTANCEOF '#' LESS_EQUAL '$' GREATER_EQUAL EQUAL NOT_EQUAL '(' ')' '+' ',' '-' ':' ';' '<' '=' '>' }';'
+Expr5:>';':> (12,10)
+Expr5
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR '!' INSTANCEOF '#' LESS_EQUAL '$' GREATER_EQUAL EQUAL NOT_EQUAL '(' ')' ',' '-' ':' ';' '<' '=' '>' }';'
+Expr4:>';':> (12,10)
+Expr4
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR '!' INSTANCEOF '#' '$' EQUAL NOT_EQUAL '(' ')' ',' '-' ':' ';' '=' }';'
+Expr3:>';':> (12,10)
+Expr3
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER AND OR '!' INSTANCEOF '#' '$' '(' ')' ',' '-' ':' ';' '=' }';'
+Expr2:>';':> (12,10)
+Expr2
+!!!end
+{ '@' NULL THIS NEW CASE DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL ']' IDENTIFIER OR '!' INSTANCEOF '#' '$' '(' ')' ',' '-' ':' ';' '=' }';'
+Expr1:>';':> (12,10)
+Expr1
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL THIS '(' ')' ',' '-' NEW CASE DCOPY SCOPY SUPER ':' READ_INTEGER ';' READ_LINE LITERAL ']' '=' IDENTIFIER }Expr:>';':> (12,10)
+Expr
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL THIS '(' ')' ',' '-' NEW CASE DCOPY SCOPY SUPER ':' READ_INTEGER ';' READ_LINE LITERAL ']' '=' IDENTIFIER }ReturnExpr:>';':> (12,10)
+ReturnExpr
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL THIS '(' '-' NEW CASE DCOPY SCOPY SUPER READ_INTEGER ';' READ_LINE LITERAL IDENTIFIER }ReturnStmt:>';':> (12,10)
+ReturnStmt
+!!!end
+{ ';' RETURN }Stmt:>'}':> (13,2)
+Stmt
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' DDD '(' '-' ';' '{' '}' }'}'
+StmtList:>'}':> (13,2)
+StmtList
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF RETURN BREAK NEW CASE DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' '(' '-' ';' '{' '}' }StmtBlock:>STATIC:> (15,5)
+StmtBlock
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' STATIC INSTANCEOF '#' '$' DDD '(' '-' '{' ';' '}' }Field:>STATIC:> (15,5)
+Field
+!!!end
+{ STATIC VOID BOOL INT COMPLEX STRING CLASS '}' }STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+DDO
+DDO
+DDO
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'<'
+'<'
+'<'
+'<'
+'<'
+'<'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+':'
+':'
+':'
+':'
+':'
+':'
+':'
+'{'
+'{'
+PRINT
+PRINT
+PRINT
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'('
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'+'
+'+'
+'+'
+'+'
+'+'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+'}'
+OOD
+'}'
+'}'
+FieldList:>'}':> (20,1)
+FieldList
+!!!end
+{ VOID STATIC BOOL INT COMPLEX STRING CLASS '}' }ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (11,22): syntax error
+*** Error at (12,9): syntax error
+*** Error at (12,10): syntax error
+*** Error at (13,2): syntax error
+*** Error at (15,5): syntax error
+*** Error at (19,5): syntax error
+*** Error at (20,1): syntax error

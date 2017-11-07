@@ -1,13 +1,47 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+DDO
+DDO
+DDO
+OOD
+DoSubStmt:>OOD:> (5,12)
+DoSubStmt
+!!!end
+{ '@' '!' INSTANCEOF '#' '$' NULL DDD THIS '(' '-' NEW CASE OOD DCOPY SCOPY SUPER READ_INTEGER READ_LINE LITERAL IDENTIFIER }OOD
+DoStmt:>';':> (5,14)
+DoStmt
+!!!end
+{ DDO ';' }Stmt:>'}':> (6,5)
+Stmt
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' DDD '(' '-' ';' '{' '}' }'}'
+StmtList:>'}':> (6,5)
+StmtList
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF RETURN BREAK NEW CASE DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' INSTANCEOF '#' '$' '(' '-' ';' '{' '}' }StmtBlock:>'}':> (7,1)
+StmtBlock
+!!!end
+{ '@' VOID BOOL INT STRING CLASS NULL THIS WHILE FOR IF ELSE RETURN BREAK NEW CASE OOD DDO DCOPY COMPLEX SCOPY SUPER PRINTCOMP PRINT READ_INTEGER READ_LINE LITERAL IDENTIFIER '!' STATIC INSTANCEOF '#' '$' DDD '(' '-' '{' ';' '}' }Field:>'}':> (7,1)
+Field
+!!!end
+{ STATIC VOID BOOL INT COMPLEX STRING CLASS '}' }'}'
+FieldList:>'}':> (7,1)
+FieldList
+!!!end
+{ VOID STATIC BOOL INT COMPLEX STRING CLASS '}' }ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (5,12): syntax error
+*** Error at (5,14): syntax error
+*** Error at (6,5): syntax error
+*** Error at (7,1): syntax error

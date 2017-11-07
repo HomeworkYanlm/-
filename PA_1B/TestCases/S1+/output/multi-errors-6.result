@@ -1,27 +1,253 @@
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Parser.parse(Parser.java:83)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parse(Parser.java:94)
-	at decaf.frontend.Parser.parseFile(Parser.java:130)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+CLASS
+CLASS
+'{'
+STATIC
+STATIC
+VOID
+VOID
+IDENTIFIER
+')'
+'{'
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'*'
+'*'
+'*'
+'('
+'('
+'('
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'+'
+'+'
+'+'
+'+'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'*'
+'*'
+'*'
+'('
+'('
+'('
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'+'
+'+'
+'+'
+'+'
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+LITERAL
+'-'
+'-'
+'-'
+'-'
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+')'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+';'
+INT
+INT
+INT
+INT
+INT
+INT
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+'='
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+IDENTIFIER
+LITERAL
+AfterIdentExpr:>LITERAL:> (6,17)
+AfterIdentExpr
+------>
+Expr9
+------>
+<eos>
+ExprT8
+------>
+Expr8
+------>
+Expr7
+------>
+<eos>
+ExprT6
+------>
+Expr6
+------>
+<eos>
+ExprT5
+------>
+Expr5
+------>
+<eos>
+ExprT4
+------>
+Expr4
+------>
+<eos>
+ExprT3
+------>
+Expr3
+------>
+<eos>
+ExprT2
+------>
+Expr2
+------>
+<eos>
+ExprT1
+------>
+Expr1
+------>
+Expr
+------>
+Assignment
+------>
+SimpleStmt
+------>
+Stmt
+------>
+<eos>
+StmtList
+------>
+StmtList
+------>
+StmtList
+------>
+StmtList
+------>
+StmtList
+------>
+StmtBlock
+------>
+Field
+------>
+<eos>
+FieldList
+------>
+FieldList
+------>
+ClassDef
+!!!end
+{ <eof> <eos> CLASS }<eos>
+Program
+!!!end
+{ <eof> <eos> CLASS }*** Error at (4,37): syntax error
+*** Error at (6,15): unrecognized character '^'
+*** Error at (6,17): syntax error
+*** Error at (11,2): syntax error
