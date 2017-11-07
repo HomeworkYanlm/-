@@ -1,39 +1,29 @@
-CLASS
-CLASS
-'{'
-STATIC
-STATIC
-VOID
-VOID
-IDENTIFIER
-')'
-'{'
-INT
-INT
-INT
-INT
-INT
-INT
-IDENTIFIER
-','
-StmtList:>',':> (3,14)
-StmtList
------->
-StmtList
------->
-StmtBlock
------->
-Field
------->
-<eos>
-FieldList
------->
-FieldList
------->
-ClassDef
-!!!end
-{ <eof> <eos> CLASS }<eos>
-Program
-!!!end
-{ <eof> <eos> CLASS }*** Error at (3,14): syntax error
-*** Error at (10,2): syntax error
+Program::CLASS:(1,1)
+ClassDef::CLASS:(1,1)
+ExtendsClause::'{':(1,12)
+FieldList::STATIC:(2,5)
+Field::STATIC:(2,5)
+Type::VOID:(2,12)
+SimpleType::VOID:(2,12)
+ArrayType::IDENTIFIER:(2,17)
+Formals::')':(2,22)
+StmtBlock::'{':(2,24)
+StmtList::INT:(3,9)
+Stmt::INT:(3,9)
+VariableDef::INT:(3,9)
+Variable::INT:(3,9)
+Type::INT:(3,9)
+SimpleType::INT:(3,9)
+ArrayType::IDENTIFIER:(3,13)
+StmtList::',':(3,14)
+Exception in thread "main" java.lang.NullPointerException
+	at decaf.frontend.Parser.parse(Parser.java:135)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parseFile(Parser.java:181)
+	at decaf.Driver.compile(Driver.java:56)
+	at decaf.Driver.main(Driver.java:70)

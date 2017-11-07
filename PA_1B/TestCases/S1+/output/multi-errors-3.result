@@ -1,15 +1,93 @@
-CLASS
-CLASS
-'{'
-'/'
-FieldList:>'/':> (2,5)
-FieldList
------->
-ClassDef
-!!!end
-{ <eof> <eos> CLASS }<eos>
-Program
-!!!end
-{ <eof> <eos> CLASS }*** Error at (2,5): syntax error
-*** Error at (7,15): unterminated string constant "not terminate"
-*** Error at (7,29): syntax error
+Program::CLASS:(1,1)
+ClassDef::CLASS:(1,1)
+ExtendsClause::'{':(1,12)
+FieldList::'/':(2,5)
+{ <eof> <eos> VOID STATIC BOOL INT COMPLEX STRING CLASS '{' '}' }{ <eof> <eos> CLASS '{' '}' }{ <eof> <eos> VOID STATIC BOOL INT COMPLEX STRING CLASS '{' '}' }none:'/'
+skip:'/'
+skip:'*'
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:IDENTIFIER
+skip:'!'
+skip:'*'
+skip:'/'
+finsh:STATIC
+begin
+Field::STATIC:(4,5)
+Type::VOID:(4,12)
+SimpleType::VOID:(4,12)
+ArrayType::IDENTIFIER:(4,17)
+Formals::')':(4,22)
+StmtBlock::'{':(4,24)
+StmtList::SUPER:(5,9)
+Stmt::SUPER:(5,9)
+SimpleStmt::SUPER:(5,9)
+Expr::SUPER:(5,9)
+Expr1::SUPER:(5,9)
+Expr2::SUPER:(5,9)
+Expr3::SUPER:(5,9)
+Expr4::SUPER:(5,9)
+Expr5::SUPER:(5,9)
+Expr6::SUPER:(5,9)
+Expr7::SUPER:(5,9)
+Expr8::SUPER:(5,9)
+Expr9::SUPER:(5,9)
+Actuals::')':(5,20)
+ExprT8::';':(5,21)
+ExprT6::';':(5,21)
+ExprT5::';':(5,21)
+ExprT4::';':(5,21)
+ExprT3::';':(5,21)
+ExprT2::';':(5,21)
+ExprT1::';':(5,21)
+Assignment::';':(5,21)
+StmtList::STRING:(6,9)
+Stmt::STRING:(6,9)
+VariableDef::STRING:(6,9)
+Variable::STRING:(6,9)
+Type::STRING:(6,9)
+SimpleType::STRING:(6,9)
+ArrayType::IDENTIFIER:(6,16)
+StmtList::IDENTIFIER:(7,9)
+Stmt::IDENTIFIER:(7,9)
+SimpleStmt::IDENTIFIER:(7,9)
+Expr::IDENTIFIER:(7,9)
+Expr1::IDENTIFIER:(7,9)
+Expr2::IDENTIFIER:(7,9)
+Expr3::IDENTIFIER:(7,9)
+Expr4::IDENTIFIER:(7,9)
+Expr5::IDENTIFIER:(7,9)
+Expr6::IDENTIFIER:(7,9)
+Expr7::IDENTIFIER:(7,9)
+Expr8::IDENTIFIER:(7,9)
+Expr9::IDENTIFIER:(7,9)
+AfterIdentExpr::'=':(7,13)
+ExprT8::'=':(7,13)
+ExprT6::'=':(7,13)
+ExprT5::'=':(7,13)
+ExprT4::'=':(7,13)
+ExprT3::'=':(7,13)
+ExprT2::'=':(7,13)
+ExprT1::'=':(7,13)
+Assignment::'=':(7,13)
+Expr::<eos>:(7,29)
+Exception in thread "main" java.lang.NullPointerException
+	at decaf.frontend.Parser.parse(Parser.java:135)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parse(Parser.java:143)
+	at decaf.frontend.Parser.parseFile(Parser.java:181)
+	at decaf.Driver.compile(Driver.java:56)
+	at decaf.Driver.main(Driver.java:70)

@@ -79,79 +79,77 @@ public class Parser extends Table {
      * @return the parsed value of `symbol` if parsing succeeded, otherwise `null`.
      */
     private SemValue parse(int symbol, Set<Integer> follow) {
-        Pair<Integer, List<Integer>> result = query(symbol, lookahead); // get production by lookahead symbol
-        System.out.println(name(lookahead));
+       
+//        System.out.println(name(symbol)+"::"+name(lookahead)+":"+lexer.getLocation());
        
         Set<Integer>setBeign = beginSet(symbol);
         Set<Integer>setFollow = followSet(symbol);
-        setFollow.addAll(follow);
+        Set<Integer>setEnd = followSet(symbol); 
+        setEnd.addAll(follow);
         Set<Integer>full = setBeign;
         full.addAll(setFollow);
         
-        try {
-        		
-        		int actionId = result.getKey(); // get user-defined action
-        		
-        		 List<Integer> right = result.getValue(); // right-hand side of production
+        Pair<Integer, List<Integer>> result = query(symbol, lookahead); // get production by lookahead symbol
+//        if(setBeign.contains(lookahead)==false)
+//        {
+//        		 printSymbolSet(full);
+//             printSymbolSet(setFollow);
+//             printSymbolSet(setBeign);
+//          	System.out.println("none:"+name(lookahead));
+//        		error();
+//        		while(name(lookahead)!="<eos>"&& (full.contains(lookahead) == false))
+//        			{
+//        				System.out.println("skip:"+name(lookahead));
+//        				lookahead = lex();
+//        			}
+//        		System.out.println("finsh:"+name(lookahead));
+//        		
+//        		if(setBeign.contains(lookahead))
+//        		{
+//        			System.out.println("begin");
+//        			
+//        			result = query(symbol, lookahead); // get production by lookahead symbol
+//        			if(setBeign.contains(lookahead)==false)
+//        			{
+//        				System.out.println("fuck u");
+//        				System.out.println(name(symbol)+">:"+name(lookahead));
+//        			}
+//        		}
+//        		else if(setEnd.contains(lookahead))
+//        		{
+//        			System.out.println("end");
+//        			return null;
+//        		}
+//        		
+//        }
+        
+        
+       
+        		if(setBeign.contains(lookahead)==false)
+        		{
+        			System.out.println(name(symbol)+">:"+name(lookahead));
+                printSymbolSet(setFollow);
+                printSymbolSet(setBeign);
+        			System.out.println("!end");
+        		}
+        			int actionId = result.getKey(); // get user-defined action
+        			List<Integer> right = result.getValue(); // right-hand side of production
         	        int length = right.size();
-        	        SemValue[] params = new SemValue[length + 1];
-
+        	        		SemValue[] params = new SemValue[length + 1];
+        	        follow.addAll(setFollow);
         	        for (int i = 0; i < length; i++) { // parse right-hand side symbols one by one
         	            int term = right.get(i);
         	            params[i + 1] = isNonTerminal(term)
-        	                    ? parse(term, follow) // for non terminals: recursively parse it
+        	                    ? parse(term,follow ) // for non terminals: recursively parse it
         	                    : matchToken(term) // for terminals: match token
         	                    ;
         	        }
-
+        	        
+        	        
         	        params[0] = new SemValue(); // initialize return value
         	        act(actionId, params); // do user-defined action
         	        return params[0];
-        } catch (Exception e) {
-        	
-        		if (name(lookahead)!="<eos>")
-         	{ 
-         		error();
-         		System.out.println(name(symbol)+":>"+name(lookahead)+":> "+lexer.getLocation());
-         	}
-        		
-        		if(setFollow.contains(lookahead))
-        		{
-        			System.out.println(name(symbol));
-        			System.out.println("!!!end");
-        			printSymbolSet(setBeign);
-        			return null;
-        		}
-        		
-        		if(setBeign.contains(lookahead))
-        		{
-        			System.out.println(">>>>>>>begin");
-        			error();
-        		}
-        		
-        		
-        		while(name(lookahead)!="<eos>"&& (full.contains(name(lookahead)) == false))
-        			lookahead = lex();
 
-        		if(setBeign.contains(lookahead))
-        		{
-        			System.out.println("begin");
-        			return parse(symbol, follow);
-        		}
-        		else if(setFollow.contains(lookahead))
-        		{
-        			
-        			return null;
-        		}
-        		else
-        		{
-        			
-        		}
-        		
-        }
-        System.out.println(name(symbol));
-        System.out.println("------>");
-        return null;
     }
 
     /**
