@@ -12,11 +12,21 @@ class Model:
         self.y_ = tf.placeholder(tf.int32, [None])
         self.keep_prob = tf.placeholder(tf.float32)
 
+        W = weight_variable([28*28, 100]);
+        b = bias_variable([100]);
+        out1 = tf.matmul(self.x_, W) + b;
+        # out2 = batch_normalization_layer(out1, is_train);
+        out3 = tf.nn.relu(out1);
+        W1 = weight_variable([100, 10]);
+        b1 = bias_variable([10]);
+        out4 = tf.matmul(out3, W1) + b1;
+        logits = out4;
+        
         # TODO:  implement input -- Linear -- BN -- ReLU -- Linear -- loss
-        #        the 10-class prediction output is named as "logits"
-        logits = tf.Variable(tf.constant(0.0, shape=[100, 10]))  # deleted this line after you implement above layers
+        #        the 10-class prediction output is named as "logits" 
+        # logits = tf.Variable(tf.constant(0.0, shape=[100, 10]))  # deleted this line after you implement above layers
 
-        self.loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=self.y_, logits=logits))
+        self.loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits,labels=self.y_))
         self.correct_pred = tf.equal(tf.cast(tf.argmax(logits, 1), tf.int32), self.y_)
         self.pred = tf.argmax(logits, 1)  # Calculate the prediction result
         self.acc = tf.reduce_mean(tf.cast(self.correct_pred, tf.float32))  # Calculate the accuracy in this mini-batch
@@ -45,7 +55,26 @@ def bias_variable(shape):  # you can use this func to build new variables
 
 def batch_normalization_layer(inputs, isTrain=True):
     # TODO: implemented the batch normalization func and applied it on fully-connected layers
-    return inputs
+    _variance_epsilon = 1e-10;
+
+    out_size = inputs.get_shape()[-1];
+    old_mean = tf.Variable(tf.zeros([out_size]), trainable=False);
+    old_variance = tf.Variable(tf.ones([out_size]), trainable=False);
+    _offset = tf.Variable(tf.zeros([out_size],dtype=tf.float32,name=None));
+    _scale = tf.Variable(tf.ones([out_size],dtype=tf.float32,name=None));
+    normalized = inputs;
+    if isTrain:
+        axis = list(range(len(inputs.get_shape()) - 1));
+        _mean, _variance = tf.nn.moments(inputs, axis);
+        train_mean = tf.assign(old_mean,
+                               old_mean * 0.999 + _mean * (0.001))
+        train_var  = tf.assign(old_variance,
+                               old_variance * 0.999 + _variance * (0.001))
+        with tf.control_dependencies([train_mean,train_var]):
+            normalized = tf.nn.batch_normalization(x=inputs,mean = _mean,variance=_variance,variance_epsilon = _variance_epsilon,offset=_offset,scale=_scale);
+    else:
+        normalized = tf.nn.batch_normalization(x=inputs,mean = old_mean,variance=old_variance,variance_epsilon = _variance_epsilon,offset=_offset,scale=_scale);
+    return normalized;
 
 
 

@@ -6,6 +6,9 @@ import os
 import time
 from model import Model
 from load_data import load_mnist_4d
+import matplotlib as mpl  
+mpl.use('TkAgg')  
+from matplotlib import pyplot as plt 
 
 tf.app.flags.DEFINE_integer("batch_size", 100, "batch size for training")
 tf.app.flags.DEFINE_integer("num_epochs", 20, "number of epochs")
@@ -16,6 +19,8 @@ tf.app.flags.DEFINE_string("train_dir", "./train", "training dir")
 tf.app.flags.DEFINE_integer("inference_version", 0, "the param version for inference")
 FLAGS = tf.app.flags.FLAGS
 
+loss_list_train = []; 
+acc_list_train = [];
 
 def shuffle(X, y, shuffle_parts):
     chunk_size = len(X) / shuffle_parts
@@ -47,6 +52,8 @@ def train_epoch(model, sess, X, y):
         acc += acc_
         st, ed = ed, ed+FLAGS.batch_size
         times += 1
+        loss_list_train.append(loss_);
+        acc_list_train.append(acc_);
     loss /= times
     acc /= times
     return acc, loss
@@ -89,6 +96,9 @@ with tf.Session() as sess:
         best_val_acc = 0.0
         for epoch in range(FLAGS.num_epochs):
             start_time = time.time()
+
+            # cnn_model.learning_rate*= 0.9;
+
             train_acc, train_loss = train_epoch(cnn_model, sess, X_train, y_train)
             X_train, y_train = shuffle(X_train, y_train, 1)
 
@@ -130,4 +140,26 @@ with tf.Session() as sess:
             result = inference(cnn_model, sess, test_image)[0]
             if result == y_test[i]:
                 count += 1
+                
         print("test accuracy: {}".format(float(count) / len(X_test)))
+        
+    plt.plot(range(len(loss_list_train)), loss_list_train ,color='r', label='train')
+    # plt.plot(range(len(loss_list_test)), loss_list_test, color='g', label='test')
+    plt.legend(loc='upper right')
+    plt.xlabel('Iteration')
+    plt.ylabel('Loss')
+    plt.savefig('Loss.png')
+    # plt.show()
+    plt.clf()
+
+
+
+    
+    plt.plot(range(len(acc_list_train)), acc_list_train ,color='g', label='train')
+    # plt.plot(range(len(loss_list_test)), loss_list_test, color='g', label='test')
+    plt.legend(loc='upper right')
+    plt.xlabel('Iteration')
+    plt.ylabel('acc')
+    plt.savefig('acc.png')
+    # plt.show()
+    plt.clf()

@@ -6,7 +6,10 @@ import os
 import time
 from model import Model
 from load_data import load_mnist_2d
-
+import matplotlib as mpl  
+mpl.use('TkAgg')  
+from matplotlib import pyplot as plt 
+counter = 0;
 tf.app.flags.DEFINE_integer("batch_size", 100, "batch size for training")
 tf.app.flags.DEFINE_integer("num_epochs", 20, "number of epochs")
 tf.app.flags.DEFINE_float("keep_prob", 0.5, "drop out rate")
@@ -16,6 +19,9 @@ tf.app.flags.DEFINE_string("train_dir", "./train", "training dir")
 tf.app.flags.DEFINE_integer("inference_version", 0, "the version for inferencing")
 FLAGS = tf.app.flags.FLAGS
 
+
+loss_list_train = []; 
+acc_list_train = [];
 
 def shuffle(X, y, shuffle_parts):  # Shuffle the X and y
     chunk_size = len(X) / shuffle_parts
@@ -43,10 +49,13 @@ def train_epoch(model, sess, X, y): # Training Process
         X_batch, y_batch = X[st:ed], y[st:ed]
         feed = {model.x_: X_batch, model.y_: y_batch, model.keep_prob: FLAGS.keep_prob}
         loss_, acc_, _ = sess.run([model.loss, model.acc, model.train_op], feed)
+        loss_list_train.append(loss_);
+        acc_list_train.append(acc_);
         loss += loss_
         acc += acc_
         st, ed = ed, ed+FLAGS.batch_size
         times += 1
+
     loss /= times
     acc /= times
     return acc, loss
@@ -63,6 +72,7 @@ def valid_epoch(model, sess, X, y):  # Valid Process
         acc += acc_
         st, ed = ed, ed+FLAGS.batch_size
         times += 1
+       
     loss /= times
     acc /= times
     return acc, loss
@@ -110,7 +120,7 @@ with tf.Session() as sess:
             print("  best validation accuracy:      " + str(best_val_acc))
             print("  test loss:                     " + str(test_loss))
             print("  test accuracy:                 " + str(test_acc))
-
+            mlp_model.learning_rate*=0;
             if train_loss > max(pre_losses):  # Learning rate decay
                 sess.run(mlp_model.learning_rate_decay_op)
             pre_losses = pre_losses[1:] + [train_loss]
@@ -131,3 +141,27 @@ with tf.Session() as sess:
             if result == y_test[i]:
                 count += 1
         print("test accuracy: {}".format(float(count) / len(X_test)))
+   
+
+
+
+
+    plt.plot(range(len(loss_list_train)), loss_list_train ,color='r', label='train')
+    # plt.plot(range(len(loss_list_test)), loss_list_test, color='g', label='test')
+    plt.legend(loc='upper right')
+    plt.xlabel('Iteration')
+    plt.ylabel('Loss')
+    plt.savefig('Loss.png')
+    # plt.show()
+    plt.clf()
+
+
+    
+    plt.plot(range(len(acc_list_train)), acc_list_train ,color='g', label='train')
+    # plt.plot(range(len(loss_list_test)), loss_list_test, color='g', label='test')
+    plt.legend(loc='upper right')
+    plt.xlabel('Iteration')
+    plt.ylabel('acc')
+    plt.savefig('acc.png')
+    # plt.show()
+    plt.clf()    
