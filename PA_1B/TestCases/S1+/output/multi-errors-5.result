@@ -1,26 +1,2 @@
-Program::CLASS:(1,1)
-ClassDef::CLASS:(1,1)
-ExtendsClause::'{':(1,12)
-FieldList::'}':(1,13)
-ClassList::CLASS:(3,1)
-ClassDef::CLASS:(3,1)
-ExtendsClause::':':(3,9)
-{ <eof> <eos> CLASS EXTENDS '{' '}' }{ <eof> <eos> CLASS '{' '}' }{ <eof> <eos> CLASS EXTENDS '{' '}' }none:':'
-skip:':'
-skip:IDENTIFIER
-finsh:'{'
-begin
-FieldList::'}':(3,17)
-ClassList::CLASS:(5,1)
-ClassDef::CLASS:(5,1)
-ExtendsClause::EXTENDS:(5,9)
-Exception in thread "main" java.lang.NullPointerException
-	at decaf.frontend.Table.act(Table.java:2082)
-	at decaf.frontend.Parser.parse(Parser.java:150)
-	at decaf.frontend.Parser.parse(Parser.java:143)
-	at decaf.frontend.Parser.parse(Parser.java:143)
-	at decaf.frontend.Parser.parse(Parser.java:143)
-	at decaf.frontend.Parser.parse(Parser.java:143)
-	at decaf.frontend.Parser.parseFile(Parser.java:181)
-	at decaf.Driver.compile(Driver.java:56)
-	at decaf.Driver.main(Driver.java:70)
+*** Error at (3,9): syntax error
+*** Error at (5,17): syntax error

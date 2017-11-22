@@ -23,19 +23,19 @@ def read_txt_file(filename):
 def main():
     decaf_jar = os.path.join('..', '..', 'result', 'decaf.jar')
     names = sys.argv[1:]
-    flag = 0;
-    tarname = "do-case.decaf";
+    flag =0;
+    tarname = "case-no-default.decaf";
 
     if not names:
         names = sorted(os.listdir('.'))
         
     for name in names:
-       # if name == tarname:
-           # flag = 1;
-        #else:
-           # flag = 0;
-        if name != "!case-week.decaf":
-#             flag = 1;
+        if name == tarname:
+            flag = 1;
+        else:
+            flag = 0;
+        if name != "!test2.decaf":
+            flag = 1;
             bname,ext = os.path.splitext(name)
             if ext != '.decaf':
                 continue

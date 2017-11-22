@@ -1,7 +1,7 @@
 /* This is auto-generated source by LL1-Parser-Gen.
  * Specification file: /Users/liminyan/Desktop/work/PA_1B/src/decaf/frontend/Parser.spec
  * Options: unstrict mode
- * Generated at: Tue Nov 07 17:01:01 CST 2017
+ * Generated at: Sat Nov 11 23:13:23 CST 2017
  * Please do NOT modify it!
  *
  * Project repository: https://github.com/paulzfm/LL1-Parser-Gen
@@ -66,70 +66,72 @@ public class Table
     public static final int VariableDef = 296;
     public static final int DoSubStmt = 297;
     public static final int ExprT5 = 298;
-    public static final int Oper3 = 299;
-    public static final int Oper6 = 300;
-    public static final int VariableList = 301;
-    public static final int Formals = 302;
-    public static final int Oper7 = 303;
-    public static final int Expr8 = 304;
-    public static final int AfterSimpleTypeExpr = 305;
-    public static final int Expr2 = 306;
-    public static final int Oper2 = 307;
-    public static final int Expr6 = 308;
-    public static final int ACaseExprlist = 309;
-    public static final int BreakStmt = 310;
-    public static final int ExprT2 = 311;
-    public static final int StmtList = 312;
-    public static final int Constant = 313;
-    public static final int SubVariableList = 314;
-    public static final int PrintStmt = 315;
-    public static final int ForStmt = 316;
-    public static final int DoBranch = 317;
-    public static final int Expr9 = 318;
-    public static final int Expr1 = 319;
-    public static final int DoBranchlist = 320;
-    public static final int Oper1 = 321;
-    public static final int ElseClause = 322;
-    public static final int FieldList = 323;
-    public static final int ACaseExpr = 324;
-    public static final int SubExprList = 325;
-    public static final int AfterParenExpr = 326;
-    public static final int ClassDef = 327;
-    public static final int ReturnStmt = 328;
-    public static final int ExprList = 329;
-    public static final int StmtBlock = 330;
-    public static final int FunctionField = 331;
-    public static final int AfterIdentExpr = 332;
-    public static final int DoStmt = 333;
-    public static final int Program = 334;
-    public static final int Expr = 335;
-    public static final int Type = 336;
-    public static final int Expr5 = 337;
-    public static final int AfterNewExpr = 338;
-    public static final int Assignment = 339;
-    public static final int ExtendsClause = 340;
-    public static final int Oper5 = 341;
-    public static final int ArrayType = 342;
-    public static final int Expr3 = 343;
-    public static final int Actuals = 344;
-    public static final int Variable = 345;
-    public static final int ExprT3 = 346;
-    public static final int Stmt = 347;
-    public static final int SimpleStmt = 348;
-    public static final int SimpleType = 349;
-    public static final int WhileStmt = 350;
-    public static final int ExprT1 = 351;
-    public static final int Expr4 = 352;
-    public static final int ExprT4 = 353;
-    public static final int ReturnExpr = 354;
-    public static final int IfStmt = 355;
-    public static final int ExprT6 = 356;
-    public static final int ExprT8 = 357;
-    public static final int DefaultExpr = 358;
-    public static final int Expr7 = 359;
-    public static final int ClassList = 360;
-    public static final int Oper4 = 361;
-    public static final int Field = 362;
+    public static final int Oper8 = 299;
+    public static final int Oper3 = 300;
+    public static final int Oper6 = 301;
+    public static final int VariableList = 302;
+    public static final int Formals = 303;
+    public static final int Oper7 = 304;
+    public static final int Expr8 = 305;
+    public static final int AfterSimpleTypeExpr = 306;
+    public static final int Expr2 = 307;
+    public static final int Oper2 = 308;
+    public static final int Expr6 = 309;
+    public static final int ACaseExprlist = 310;
+    public static final int BreakStmt = 311;
+    public static final int ExprT2 = 312;
+    public static final int StmtList = 313;
+    public static final int Constant = 314;
+    public static final int SubVariableList = 315;
+    public static final int PrintStmt = 316;
+    public static final int ForStmt = 317;
+    public static final int DoBranch = 318;
+    public static final int Expr9 = 319;
+    public static final int Expr1 = 320;
+    public static final int DoBranchlist = 321;
+    public static final int Oper1 = 322;
+    public static final int ElseClause = 323;
+    public static final int FieldList = 324;
+    public static final int ACaseExpr = 325;
+    public static final int SubExprList = 326;
+    public static final int Expr10 = 327;
+    public static final int AfterParenExpr = 328;
+    public static final int ClassDef = 329;
+    public static final int ReturnStmt = 330;
+    public static final int ExprList = 331;
+    public static final int StmtBlock = 332;
+    public static final int FunctionField = 333;
+    public static final int AfterIdentExpr = 334;
+    public static final int DoStmt = 335;
+    public static final int Program = 336;
+    public static final int Expr = 337;
+    public static final int Type = 338;
+    public static final int Expr5 = 339;
+    public static final int AfterNewExpr = 340;
+    public static final int Assignment = 341;
+    public static final int ExtendsClause = 342;
+    public static final int Oper5 = 343;
+    public static final int ArrayType = 344;
+    public static final int Expr3 = 345;
+    public static final int Actuals = 346;
+    public static final int Variable = 347;
+    public static final int ExprT3 = 348;
+    public static final int Stmt = 349;
+    public static final int SimpleStmt = 350;
+    public static final int SimpleType = 351;
+    public static final int WhileStmt = 352;
+    public static final int ExprT1 = 353;
+    public static final int Expr4 = 354;
+    public static final int ExprT4 = 355;
+    public static final int ReturnExpr = 356;
+    public static final int IfStmt = 357;
+    public static final int ExprT6 = 358;
+    public static final int ExprT8 = 359;
+    public static final int DefaultExpr = 360;
+    public static final int Expr7 = 361;
+    public static final int ClassList = 362;
+    public static final int Oper4 = 363;
+    public static final int Field = 364;
     
     /* start symbol */
     public final int start = Program;
@@ -154,20 +156,20 @@ public class Table
         "PRINT", "READ_INTEGER", "READ_LINE", "LITERAL", "IDENTIFIER",
         "AND", "OR", "STATIC", "INSTANCEOF", "LESS_EQUAL",
         "GREATER_EQUAL", "EQUAL", "NOT_EQUAL", "DDD", "VariableDef",
-        "DoSubStmt", "ExprT5", "Oper3", "Oper6", "VariableList",
-        "Formals", "Oper7", "Expr8", "AfterSimpleTypeExpr", "Expr2",
-        "Oper2", "Expr6", "ACaseExprlist", "BreakStmt", "ExprT2",
-        "StmtList", "Constant", "SubVariableList", "PrintStmt", "ForStmt",
-        "DoBranch", "Expr9", "Expr1", "DoBranchlist", "Oper1",
-        "ElseClause", "FieldList", "ACaseExpr", "SubExprList", "AfterParenExpr",
-        "ClassDef", "ReturnStmt", "ExprList", "StmtBlock", "FunctionField",
-        "AfterIdentExpr", "DoStmt", "Program", "Expr", "Type",
-        "Expr5", "AfterNewExpr", "Assignment", "ExtendsClause", "Oper5",
-        "ArrayType", "Expr3", "Actuals", "Variable", "ExprT3",
-        "Stmt", "SimpleStmt", "SimpleType", "WhileStmt", "ExprT1",
-        "Expr4", "ExprT4", "ReturnExpr", "IfStmt", "ExprT6",
-        "ExprT8", "DefaultExpr", "Expr7", "ClassList", "Oper4",
-        "Field",
+        "DoSubStmt", "ExprT5", "Oper8", "Oper3", "Oper6",
+        "VariableList", "Formals", "Oper7", "Expr8", "AfterSimpleTypeExpr",
+        "Expr2", "Oper2", "Expr6", "ACaseExprlist", "BreakStmt",
+        "ExprT2", "StmtList", "Constant", "SubVariableList", "PrintStmt",
+        "ForStmt", "DoBranch", "Expr9", "Expr1", "DoBranchlist",
+        "Oper1", "ElseClause", "FieldList", "ACaseExpr", "SubExprList",
+        "Expr10", "AfterParenExpr", "ClassDef", "ReturnStmt", "ExprList",
+        "StmtBlock", "FunctionField", "AfterIdentExpr", "DoStmt", "Program",
+        "Expr", "Type", "Expr5", "AfterNewExpr", "Assignment",
+        "ExtendsClause", "Oper5", "ArrayType", "Expr3", "Actuals",
+        "Variable", "ExprT3", "Stmt", "SimpleStmt", "SimpleType",
+        "WhileStmt", "ExprT1", "Expr4", "ExprT4", "ReturnExpr",
+        "IfStmt", "ExprT6", "ExprT8", "DefaultExpr", "Expr7",
+        "ClassList", "Oper4", "Field",
     };
     
     /**
@@ -191,12 +193,13 @@ public class Table
         {COMPLEX, VOID, CLASS, INT, STRING, BOOL},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {Integer.valueOf('+'), Integer.valueOf('-'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, AND, Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('>')},
+        {Integer.valueOf('@'), Integer.valueOf('#'), Integer.valueOf('$')},
         {EQUAL, NOT_EQUAL},
         {Integer.valueOf('*'), Integer.valueOf('/'), Integer.valueOf('%')},
         {COMPLEX, VOID, CLASS, INT, STRING, BOOL},
         {COMPLEX, VOID, CLASS, INT, STRING, BOOL, Integer.valueOf(')')},
-        {Integer.valueOf('-'), Integer.valueOf('!'), Integer.valueOf('@'), Integer.valueOf('#'), Integer.valueOf('$')},
-        {CASE, READ_LINE, NULL, SCOPY, IDENTIFIER, NEW, THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), DCOPY, SUPER, READ_INTEGER},
+        {Integer.valueOf('-'), Integer.valueOf('!')},
+        {CASE, READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {Integer.valueOf(']'), CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {AND},
@@ -210,7 +213,7 @@ public class Table
         {PRINT, PRINTCOMP},
         {FOR},
         {DDD},
-        {LITERAL, NULL, READ_INTEGER, READ_LINE, THIS, NEW, INSTANCEOF, Integer.valueOf('('), IDENTIFIER, CASE, DCOPY, SCOPY, SUPER},
+        {Integer.valueOf('@'), Integer.valueOf('#'), Integer.valueOf('$'), CASE, READ_LINE, NULL, SCOPY, IDENTIFIER, NEW, THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), DCOPY, SUPER, READ_INTEGER},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {DDD, OOD},
         {OR},
@@ -218,6 +221,7 @@ public class Table
         {COMPLEX, VOID, CLASS, INT, STRING, STATIC, BOOL, Integer.valueOf('}')},
         {LITERAL, NULL},
         {Integer.valueOf(','), Integer.valueOf(')')},
+        {LITERAL, NULL, READ_INTEGER, READ_LINE, THIS, NEW, INSTANCEOF, Integer.valueOf('('), IDENTIFIER, CASE, DCOPY, SCOPY, SUPER},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER, CLASS},
         {CLASS},
         {RETURN},
@@ -251,7 +255,7 @@ public class Table
         {Integer.valueOf('*'), Integer.valueOf('/'), Integer.valueOf('%'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('>')},
         {Integer.valueOf('['), Integer.valueOf('.'), Integer.valueOf('/'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf('*'), Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('>'), Integer.valueOf('%')},
         {DEFULT},
-        {Integer.valueOf('!'), Integer.valueOf('-'), Integer.valueOf('@'), Integer.valueOf('$'), Integer.valueOf('#'), CASE, READ_LINE, NULL, SCOPY, IDENTIFIER, NEW, THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), DCOPY, SUPER, READ_INTEGER},
+        {Integer.valueOf('-'), Integer.valueOf('!'), CASE, READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {CLASS, eof, eos},
         {LESS_EQUAL, GREATER_EQUAL, Integer.valueOf('<'), Integer.valueOf('>')},
         {STATIC, COMPLEX, VOID, CLASS, INT, STRING, BOOL},
@@ -274,11 +278,12 @@ public class Table
         {PRINT, CASE, COMPLEX, VOID, FOR, Integer.valueOf('!'), Integer.valueOf('-'), CLASS, PRINTCOMP, DDO, READ_LINE, WHILE, RETURN, OOD, NULL, INT, SCOPY, Integer.valueOf('}'), Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), IF, THIS, INSTANCEOF, STRING, LITERAL, ELSE, Integer.valueOf('('), Integer.valueOf(';'), Integer.valueOf('#'), DCOPY, BOOL, SUPER, BREAK, READ_INTEGER, Integer.valueOf('{'), DDD},
         {DDD, OOD},
         {LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, AND, Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('>')},
+        {CASE, READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {Integer.valueOf(')')},
         {Integer.valueOf(')')},
-        {CASE, READ_LINE, NULL, SCOPY, IDENTIFIER, NEW, THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), DCOPY, SUPER, READ_INTEGER},
+        {CASE, Integer.valueOf('!'), Integer.valueOf('-'), READ_LINE, NULL, SCOPY, Integer.valueOf('@'), IDENTIFIER, NEW, Integer.valueOf('$'), THIS, INSTANCEOF, LITERAL, Integer.valueOf('('), Integer.valueOf('#'), DCOPY, SUPER, READ_INTEGER},
         {Integer.valueOf('/'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf('*'), Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('>'), Integer.valueOf('%')},
         {Integer.valueOf('/'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('.'), Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf('*'), Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('['), Integer.valueOf('>'), Integer.valueOf('%')},
         {Integer.valueOf(']'), Integer.valueOf(':'), Integer.valueOf(')'), Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf(';')},
@@ -301,6 +306,7 @@ public class Table
         {Integer.valueOf('}')},
         {LITERAL, NULL, DEFULT},
         {Integer.valueOf(')')},
+        {Integer.valueOf('/'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('.'), Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf('*'), Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('['), Integer.valueOf('>'), Integer.valueOf('%')},
         {Integer.valueOf('/'), LESS_EQUAL, Integer.valueOf(']'), GREATER_EQUAL, Integer.valueOf('.'), Integer.valueOf('-'), Integer.valueOf(':'), EQUAL, Integer.valueOf(')'), NOT_EQUAL, Integer.valueOf(','), Integer.valueOf('='), OR, Integer.valueOf('+'), AND, Integer.valueOf('*'), Integer.valueOf(';'), Integer.valueOf('<'), Integer.valueOf('['), Integer.valueOf('>'), Integer.valueOf('%')},
         {CLASS, eof, eos},
         {Integer.valueOf(';')},
@@ -352,7 +358,7 @@ public class Table
     }
     
     public Table() {
-        for (int i = 0; i < 67; i++) {
+        for (int i = 0; i < 69; i++) {
             begin.add(new HashSet(Arrays.asList(beginRaw[i])));
             follow.add(new HashSet(Arrays.asList(followRaw[i])));
         }
@@ -386,7 +392,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 835
+            //# line 844
             case DoSubStmt: {
                 switch (lookahead) {
                     case CASE:
@@ -411,7 +417,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 516
+            //# line 519
             case ExprT5: {
                 switch (lookahead) {
                     case '+':
@@ -431,7 +437,19 @@ public class Table
                     case ';':
                     case '<':
                     case '>':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
+                    default: return null;
+                }
+            }
+            //# line 367
+            case Oper8: {
+                switch (lookahead) {
+                    case '@':
+                        return new Pair<>(4, Arrays.asList(Integer.valueOf('@')));
+                    case '#':
+                        return new Pair<>(5, Arrays.asList(Integer.valueOf('#')));
+                    case '$':
+                        return new Pair<>(6, Arrays.asList(Integer.valueOf('$')));
                     default: return null;
                 }
             }
@@ -439,9 +457,9 @@ public class Table
             case Oper3: {
                 switch (lookahead) {
                     case EQUAL:
-                        return new Pair<>(4, Arrays.asList(EQUAL));
+                        return new Pair<>(7, Arrays.asList(EQUAL));
                     case NOT_EQUAL:
-                        return new Pair<>(5, Arrays.asList(NOT_EQUAL));
+                        return new Pair<>(8, Arrays.asList(NOT_EQUAL));
                     default: return null;
                 }
             }
@@ -449,11 +467,11 @@ public class Table
             case Oper6: {
                 switch (lookahead) {
                     case '*':
-                        return new Pair<>(6, Arrays.asList(Integer.valueOf('*')));
+                        return new Pair<>(9, Arrays.asList(Integer.valueOf('*')));
                     case '/':
-                        return new Pair<>(7, Arrays.asList(Integer.valueOf('/')));
+                        return new Pair<>(10, Arrays.asList(Integer.valueOf('/')));
                     case '%':
-                        return new Pair<>(8, Arrays.asList(Integer.valueOf('%')));
+                        return new Pair<>(11, Arrays.asList(Integer.valueOf('%')));
                     default: return null;
                 }
             }
@@ -466,7 +484,7 @@ public class Table
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(9, Arrays.asList(Variable, SubVariableList));
+                        return new Pair<>(12, Arrays.asList(Variable, SubVariableList));
                     default: return null;
                 }
             }
@@ -479,9 +497,9 @@ public class Table
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(10, Arrays.asList(VariableList));
+                        return new Pair<>(13, Arrays.asList(VariableList));
                     case ')':
-                        return new Pair<>(11, Arrays.asList());
+                        return new Pair<>(14, Arrays.asList());
                     default: return null;
                 }
             }
@@ -489,31 +507,28 @@ public class Table
             case Oper7: {
                 switch (lookahead) {
                     case '-':
-                        return new Pair<>(12, Arrays.asList(Integer.valueOf('-')));
+                        return new Pair<>(15, Arrays.asList(Integer.valueOf('-')));
                     case '!':
-                        return new Pair<>(13, Arrays.asList(Integer.valueOf('!')));
-                    case '@':
-                        return new Pair<>(14, Arrays.asList(Integer.valueOf('@')));
-                    case '#':
-                        return new Pair<>(15, Arrays.asList(Integer.valueOf('#')));
-                    case '$':
-                        return new Pair<>(16, Arrays.asList(Integer.valueOf('$')));
+                        return new Pair<>(16, Arrays.asList(Integer.valueOf('!')));
                     default: return null;
                 }
             }
-            //# line 572
+            //# line 575
             case Expr8: {
                 switch (lookahead) {
                     case CASE:
                     case READ_LINE:
                     case NULL:
                     case SCOPY:
+                    case '@':
                     case IDENTIFIER:
                     case NEW:
+                    case '$':
                     case THIS:
                     case INSTANCEOF:
                     case LITERAL:
                     case '(':
+                    case '#':
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
@@ -521,7 +536,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 699
+            //# line 712
             case AfterSimpleTypeExpr: {
                 switch (lookahead) {
                     case ']':
@@ -548,7 +563,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 417
+            //# line 420
             case Expr2: {
                 switch (lookahead) {
                     case CASE:
@@ -581,7 +596,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 533
+            //# line 536
             case Expr6: {
                 switch (lookahead) {
                     case CASE:
@@ -606,7 +621,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 737
+            //# line 750
             case ACaseExprlist: {
                 switch (lookahead) {
                     case LITERAL:
@@ -617,7 +632,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 810
+            //# line 819
             case BreakStmt: {
                 switch (lookahead) {
                     case BREAK:
@@ -625,7 +640,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 429
+            //# line 432
             case ExprT2: {
                 switch (lookahead) {
                     case AND:
@@ -637,7 +652,7 @@ public class Table
                     case '=':
                     case OR:
                     case ';':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -680,11 +695,11 @@ public class Table
                     case '{':
                         return new Pair<>(28, Arrays.asList(Stmt, StmtList));
                     case '}':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 752
+            //# line 765
             case Constant: {
                 switch (lookahead) {
                     case LITERAL:
@@ -700,11 +715,11 @@ public class Table
                     case ',':
                         return new Pair<>(32, Arrays.asList(Integer.valueOf(','), Variable, SubVariableList));
                     case ')':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 875
+            //# line 881
             case PrintStmt: {
                 switch (lookahead) {
                     case PRINT:
@@ -714,7 +729,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 804
+            //# line 813
             case ForStmt: {
                 switch (lookahead) {
                     case FOR:
@@ -722,7 +737,7 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 840
+            //# line 849
             case DoBranch: {
                 switch (lookahead) {
                     case DDD:
@@ -730,38 +745,31 @@ public class Table
                     default: return null;
                 }
             }
-            //# line 624
+            //# line 627
             case Expr9: {
                 switch (lookahead) {
-                    case LITERAL:
-                    case NULL:
-                        return new Pair<>(38, Arrays.asList(Constant));
-                    case READ_INTEGER:
-                        return new Pair<>(39, Arrays.asList(READ_INTEGER, Integer.valueOf('('), Integer.valueOf(')')));
-                    case READ_LINE:
-                        return new Pair<>(40, Arrays.asList(READ_LINE, Integer.valueOf('('), Integer.valueOf(')')));
-                    case THIS:
-                        return new Pair<>(41, Arrays.asList(THIS));
-                    case NEW:
-                        return new Pair<>(42, Arrays.asList(NEW, AfterNewExpr));
-                    case INSTANCEOF:
-                        return new Pair<>(43, Arrays.asList(INSTANCEOF, Integer.valueOf('('), Expr, Integer.valueOf(','), IDENTIFIER, Integer.valueOf(')')));
-                    case '(':
-                        return new Pair<>(44, Arrays.asList(Integer.valueOf('('), AfterParenExpr));
-                    case IDENTIFIER:
-                        return new Pair<>(45, Arrays.asList(IDENTIFIER, AfterIdentExpr));
+                    case '@':
+                    case '#':
+                    case '$':
+                        return new Pair<>(38, Arrays.asList(Oper8, Expr9));
                     case CASE:
-                        return new Pair<>(46, Arrays.asList(CASE, Integer.valueOf('('), Expr, Integer.valueOf(')'), Integer.valueOf('{'), ACaseExprlist, DefaultExpr, Integer.valueOf('}')));
-                    case DCOPY:
-                        return new Pair<>(47, Arrays.asList(DCOPY, Integer.valueOf('('), Expr, Integer.valueOf(')')));
+                    case READ_LINE:
+                    case NULL:
                     case SCOPY:
-                        return new Pair<>(48, Arrays.asList(SCOPY, Integer.valueOf('('), Expr, Integer.valueOf(')')));
+                    case IDENTIFIER:
+                    case NEW:
+                    case THIS:
+                    case INSTANCEOF:
+                    case LITERAL:
+                    case '(':
+                    case DCOPY:
                     case SUPER:
-                        return new Pair<>(49, Arrays.asList(SUPER, Integer.valueOf('.'), IDENTIFIER, Integer.valueOf('('), Actuals, Integer.valueOf(')')));
+                    case READ_INTEGER:
+                        return new Pair<>(39, Arrays.asList(Expr10));
                     default: return null;
                 }
             }
-            //# line 388
+            //# line 391
             case Expr1: {
                 switch (lookahead) {
                     case CASE:
@@ -782,17 +790,17 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(50, Arrays.asList(Expr2, ExprT1));
+                        return new Pair<>(40, Arrays.asList(Expr2, ExprT1));
                     default: return null;
                 }
             }
-            //# line 846
+            //# line 855
             case DoBranchlist: {
                 switch (lookahead) {
                     case DDD:
-                        return new Pair<>(51, Arrays.asList(DoBranch, DoBranchlist));
+                        return new Pair<>(41, Arrays.asList(DoBranch, DoBranchlist));
                     case OOD:
-                        return new Pair<>(52, Arrays.asList());
+                        return new Pair<>(42, Arrays.asList());
                     default: return null;
                 }
             }
@@ -800,15 +808,15 @@ public class Table
             case Oper1: {
                 switch (lookahead) {
                     case OR:
-                        return new Pair<>(53, Arrays.asList(OR));
+                        return new Pair<>(43, Arrays.asList(OR));
                     default: return null;
                 }
             }
-            //# line 822
+            //# line 831
             case ElseClause: {
                 switch (lookahead) {
                     case ELSE:
-                        return new Pair<>(54, Arrays.asList(ELSE, Stmt));
+                        return new Pair<>(44, Arrays.asList(ELSE, Stmt));
                     case PRINT:
                     case CASE:
                     case COMPLEX:
@@ -846,7 +854,7 @@ public class Table
                     case READ_INTEGER:
                     case '{':
                     case DDD:
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -860,32 +868,63 @@ public class Table
                     case STRING:
                     case STATIC:
                     case BOOL:
-                        return new Pair<>(56, Arrays.asList(Field, FieldList));
+                        return new Pair<>(46, Arrays.asList(Field, FieldList));
                     case '}':
-                        return new Pair<>(57, Arrays.asList());
+                        return new Pair<>(47, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 731
+            //# line 744
             case ACaseExpr: {
                 switch (lookahead) {
                     case LITERAL:
                     case NULL:
-                        return new Pair<>(58, Arrays.asList(Constant, Integer.valueOf(':'), Expr, Integer.valueOf(';')));
+                        return new Pair<>(48, Arrays.asList(Constant, Integer.valueOf(':'), Expr, Integer.valueOf(';')));
                     default: return null;
                 }
             }
-            //# line 781
+            //# line 794
             case SubExprList: {
                 switch (lookahead) {
                     case ',':
-                        return new Pair<>(59, Arrays.asList(Integer.valueOf(','), Expr, SubExprList));
+                        return new Pair<>(49, Arrays.asList(Integer.valueOf(','), Expr, SubExprList));
                     case ')':
-                        return new Pair<>(60, Arrays.asList());
+                        return new Pair<>(50, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 711
+            //# line 637
+            case Expr10: {
+                switch (lookahead) {
+                    case LITERAL:
+                    case NULL:
+                        return new Pair<>(51, Arrays.asList(Constant));
+                    case READ_INTEGER:
+                        return new Pair<>(52, Arrays.asList(READ_INTEGER, Integer.valueOf('('), Integer.valueOf(')')));
+                    case READ_LINE:
+                        return new Pair<>(53, Arrays.asList(READ_LINE, Integer.valueOf('('), Integer.valueOf(')')));
+                    case THIS:
+                        return new Pair<>(54, Arrays.asList(THIS));
+                    case NEW:
+                        return new Pair<>(55, Arrays.asList(NEW, AfterNewExpr));
+                    case INSTANCEOF:
+                        return new Pair<>(56, Arrays.asList(INSTANCEOF, Integer.valueOf('('), Expr, Integer.valueOf(','), IDENTIFIER, Integer.valueOf(')')));
+                    case '(':
+                        return new Pair<>(57, Arrays.asList(Integer.valueOf('('), AfterParenExpr));
+                    case IDENTIFIER:
+                        return new Pair<>(58, Arrays.asList(IDENTIFIER, AfterIdentExpr));
+                    case CASE:
+                        return new Pair<>(59, Arrays.asList(CASE, Integer.valueOf('('), Expr, Integer.valueOf(')'), Integer.valueOf('{'), ACaseExprlist, DefaultExpr, Integer.valueOf('}')));
+                    case DCOPY:
+                        return new Pair<>(60, Arrays.asList(DCOPY, Integer.valueOf('('), Expr, Integer.valueOf(')')));
+                    case SCOPY:
+                        return new Pair<>(61, Arrays.asList(SCOPY, Integer.valueOf('('), Expr, Integer.valueOf(')')));
+                    case SUPER:
+                        return new Pair<>(62, Arrays.asList(SUPER, Integer.valueOf('.'), IDENTIFIER, Integer.valueOf('('), Actuals, Integer.valueOf(')')));
+                    default: return null;
+                }
+            }
+            //# line 724
             case AfterParenExpr: {
                 switch (lookahead) {
                     case CASE:
@@ -906,9 +945,9 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(61, Arrays.asList(Expr, Integer.valueOf(')')));
+                        return new Pair<>(63, Arrays.asList(Expr, Integer.valueOf(')')));
                     case CLASS:
-                        return new Pair<>(62, Arrays.asList(CLASS, IDENTIFIER, Integer.valueOf(')'), Expr9));
+                        return new Pair<>(64, Arrays.asList(CLASS, IDENTIFIER, Integer.valueOf(')'), Expr9));
                     default: return null;
                 }
             }
@@ -916,19 +955,19 @@ public class Table
             case ClassDef: {
                 switch (lookahead) {
                     case CLASS:
-                        return new Pair<>(63, Arrays.asList(CLASS, IDENTIFIER, ExtendsClause, Integer.valueOf('{'), FieldList, Integer.valueOf('}')));
+                        return new Pair<>(65, Arrays.asList(CLASS, IDENTIFIER, ExtendsClause, Integer.valueOf('{'), FieldList, Integer.valueOf('}')));
                     default: return null;
                 }
             }
-            //# line 829
+            //# line 838
             case ReturnStmt: {
                 switch (lookahead) {
                     case RETURN:
-                        return new Pair<>(64, Arrays.asList(RETURN, ReturnExpr));
+                        return new Pair<>(66, Arrays.asList(RETURN, ReturnExpr));
                     default: return null;
                 }
             }
-            //# line 773
+            //# line 786
             case ExprList: {
                 switch (lookahead) {
                     case CASE:
@@ -949,7 +988,7 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(65, Arrays.asList(Expr, SubExprList));
+                        return new Pair<>(67, Arrays.asList(Expr, SubExprList));
                     default: return null;
                 }
             }
@@ -957,7 +996,7 @@ public class Table
             case StmtBlock: {
                 switch (lookahead) {
                     case '{':
-                        return new Pair<>(66, Arrays.asList(Integer.valueOf('{'), StmtList, Integer.valueOf('}')));
+                        return new Pair<>(68, Arrays.asList(Integer.valueOf('{'), StmtList, Integer.valueOf('}')));
                     default: return null;
                 }
             }
@@ -965,17 +1004,17 @@ public class Table
             case FunctionField: {
                 switch (lookahead) {
                     case '(':
-                        return new Pair<>(67, Arrays.asList(Integer.valueOf('('), Formals, Integer.valueOf(')'), StmtBlock));
+                        return new Pair<>(69, Arrays.asList(Integer.valueOf('('), Formals, Integer.valueOf(')'), StmtBlock));
                     case ';':
-                        return new Pair<>(128, Arrays.asList(Integer.valueOf(';')));
+                        return new Pair<>(130, Arrays.asList(Integer.valueOf(';')));
                     default: return null;
                 }
             }
-            //# line 617
+            //# line 620
             case AfterIdentExpr: {
                 switch (lookahead) {
                     case '(':
-                        return new Pair<>(69, Arrays.asList(Integer.valueOf('('), Actuals, Integer.valueOf(')')));
+                        return new Pair<>(71, Arrays.asList(Integer.valueOf('('), Actuals, Integer.valueOf(')')));
                     case '/':
                     case LESS_EQUAL:
                     case ']':
@@ -997,15 +1036,15 @@ public class Table
                     case '[':
                     case '>':
                     case '%':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 858
+            //# line 867
             case DoStmt: {
                 switch (lookahead) {
                     case DDO:
-                        return new Pair<>(71, Arrays.asList(DDO, DoSubStmt, DoBranchlist, OOD));
+                        return new Pair<>(73, Arrays.asList(DDO, DoSubStmt, DoBranchlist, OOD));
                     default: return null;
                 }
             }
@@ -1013,11 +1052,11 @@ public class Table
             case Program: {
                 switch (lookahead) {
                     case CLASS:
-                        return new Pair<>(72, Arrays.asList(ClassDef, ClassList));
+                        return new Pair<>(74, Arrays.asList(ClassDef, ClassList));
                     default: return null;
                 }
             }
-            //# line 382
+            //# line 385
             case Expr: {
                 switch (lookahead) {
                     case CASE:
@@ -1038,7 +1077,7 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(73, Arrays.asList(Expr1));
+                        return new Pair<>(75, Arrays.asList(Expr1));
                     default: return null;
                 }
             }
@@ -1051,11 +1090,11 @@ public class Table
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(74, Arrays.asList(SimpleType, ArrayType));
+                        return new Pair<>(76, Arrays.asList(SimpleType, ArrayType));
                     default: return null;
                 }
             }
-            //# line 504
+            //# line 507
             case Expr5: {
                 switch (lookahead) {
                     case CASE:
@@ -1076,22 +1115,22 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(75, Arrays.asList(Expr6, ExprT5));
+                        return new Pair<>(77, Arrays.asList(Expr6, ExprT5));
                     default: return null;
                 }
             }
-            //# line 685
+            //# line 698
             case AfterNewExpr: {
                 switch (lookahead) {
                     case IDENTIFIER:
-                        return new Pair<>(76, Arrays.asList(IDENTIFIER, Integer.valueOf('('), Integer.valueOf(')')));
+                        return new Pair<>(78, Arrays.asList(IDENTIFIER, Integer.valueOf('('), Integer.valueOf(')')));
                     case COMPLEX:
                     case VOID:
                     case CLASS:
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(77, Arrays.asList(SimpleType, Integer.valueOf('['), AfterSimpleTypeExpr));
+                        return new Pair<>(79, Arrays.asList(SimpleType, Integer.valueOf('['), AfterSimpleTypeExpr));
                     default: return null;
                 }
             }
@@ -1099,10 +1138,10 @@ public class Table
             case Assignment: {
                 switch (lookahead) {
                     case '=':
-                        return new Pair<>(78, Arrays.asList(Integer.valueOf('='), Expr));
+                        return new Pair<>(80, Arrays.asList(Integer.valueOf('='), Expr));
                     case ';':
                     case ')':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1110,9 +1149,9 @@ public class Table
             case ExtendsClause: {
                 switch (lookahead) {
                     case EXTENDS:
-                        return new Pair<>(80, Arrays.asList(EXTENDS, IDENTIFIER));
+                        return new Pair<>(82, Arrays.asList(EXTENDS, IDENTIFIER));
                     case '{':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1120,9 +1159,9 @@ public class Table
             case Oper5: {
                 switch (lookahead) {
                     case '+':
-                        return new Pair<>(82, Arrays.asList(Integer.valueOf('+')));
+                        return new Pair<>(84, Arrays.asList(Integer.valueOf('+')));
                     case '-':
-                        return new Pair<>(83, Arrays.asList(Integer.valueOf('-')));
+                        return new Pair<>(85, Arrays.asList(Integer.valueOf('-')));
                     default: return null;
                 }
             }
@@ -1130,13 +1169,13 @@ public class Table
             case ArrayType: {
                 switch (lookahead) {
                     case '[':
-                        return new Pair<>(84, Arrays.asList(Integer.valueOf('['), Integer.valueOf(']'), ArrayType));
+                        return new Pair<>(86, Arrays.asList(Integer.valueOf('['), Integer.valueOf(']'), ArrayType));
                     case IDENTIFIER:
-                        return new Pair<>(85, Arrays.asList());
+                        return new Pair<>(87, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 446
+            //# line 449
             case Expr3: {
                 switch (lookahead) {
                     case CASE:
@@ -1157,11 +1196,11 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(86, Arrays.asList(Expr4, ExprT3));
+                        return new Pair<>(88, Arrays.asList(Expr4, ExprT3));
                     default: return null;
                 }
             }
-            //# line 762
+            //# line 775
             case Actuals: {
                 switch (lookahead) {
                     case CASE:
@@ -1182,9 +1221,9 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(87, Arrays.asList(ExprList));
+                        return new Pair<>(89, Arrays.asList(ExprList));
                     case ')':
-                        return new Pair<>(88, Arrays.asList());
+                        return new Pair<>(90, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1197,16 +1236,16 @@ public class Table
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(89, Arrays.asList(Type, IDENTIFIER));
+                        return new Pair<>(91, Arrays.asList(Type, IDENTIFIER));
                     default: return null;
                 }
             }
-            //# line 458
+            //# line 461
             case ExprT3: {
                 switch (lookahead) {
                     case EQUAL:
                     case NOT_EQUAL:
-                        return new Pair<>(90, Arrays.asList(Oper3, Expr4, ExprT3));
+                        return new Pair<>(92, Arrays.asList(Oper3, Expr4, ExprT3));
                     case ']':
                     case ':':
                     case ')':
@@ -1215,7 +1254,7 @@ public class Table
                     case OR:
                     case AND:
                     case ';':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1228,7 +1267,7 @@ public class Table
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(92, Arrays.asList(VariableDef));
+                        return new Pair<>(94, Arrays.asList(VariableDef));
                     case CASE:
                     case '!':
                     case '-':
@@ -1248,24 +1287,24 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(93, Arrays.asList(SimpleStmt, Integer.valueOf(';')));
+                        return new Pair<>(95, Arrays.asList(SimpleStmt, Integer.valueOf(';')));
                     case IF:
-                        return new Pair<>(94, Arrays.asList(IfStmt));
+                        return new Pair<>(96, Arrays.asList(IfStmt));
                     case WHILE:
-                        return new Pair<>(95, Arrays.asList(WhileStmt));
+                        return new Pair<>(97, Arrays.asList(WhileStmt));
                     case FOR:
-                        return new Pair<>(96, Arrays.asList(ForStmt));
+                        return new Pair<>(98, Arrays.asList(ForStmt));
                     case RETURN:
-                        return new Pair<>(97, Arrays.asList(ReturnStmt, Integer.valueOf(';')));
+                        return new Pair<>(99, Arrays.asList(ReturnStmt, Integer.valueOf(';')));
                     case PRINT:
                     case PRINTCOMP:
-                        return new Pair<>(98, Arrays.asList(PrintStmt, Integer.valueOf(';')));
+                        return new Pair<>(100, Arrays.asList(PrintStmt, Integer.valueOf(';')));
                     case BREAK:
-                        return new Pair<>(99, Arrays.asList(BreakStmt, Integer.valueOf(';')));
+                        return new Pair<>(101, Arrays.asList(BreakStmt, Integer.valueOf(';')));
                     case DDO:
-                        return new Pair<>(100, Arrays.asList(DoStmt, Integer.valueOf(';')));
+                        return new Pair<>(102, Arrays.asList(DoStmt, Integer.valueOf(';')));
                     case '{':
-                        return new Pair<>(101, Arrays.asList(StmtBlock));
+                        return new Pair<>(103, Arrays.asList(StmtBlock));
                     default: return null;
                 }
             }
@@ -1290,10 +1329,10 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(102, Arrays.asList(Expr, Assignment));
+                        return new Pair<>(104, Arrays.asList(Expr, Assignment));
                     case ';':
                     case ')':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1301,44 +1340,44 @@ public class Table
             case SimpleType: {
                 switch (lookahead) {
                     case INT:
-                        return new Pair<>(104, Arrays.asList(INT));
+                        return new Pair<>(106, Arrays.asList(INT));
                     case VOID:
-                        return new Pair<>(105, Arrays.asList(VOID));
+                        return new Pair<>(107, Arrays.asList(VOID));
                     case COMPLEX:
-                        return new Pair<>(106, Arrays.asList(COMPLEX));
+                        return new Pair<>(108, Arrays.asList(COMPLEX));
                     case BOOL:
-                        return new Pair<>(107, Arrays.asList(BOOL));
+                        return new Pair<>(109, Arrays.asList(BOOL));
                     case STRING:
-                        return new Pair<>(108, Arrays.asList(STRING));
+                        return new Pair<>(110, Arrays.asList(STRING));
                     case CLASS:
-                        return new Pair<>(109, Arrays.asList(CLASS, IDENTIFIER));
+                        return new Pair<>(111, Arrays.asList(CLASS, IDENTIFIER));
                     default: return null;
                 }
             }
-            //# line 798
+            //# line 807
             case WhileStmt: {
                 switch (lookahead) {
                     case WHILE:
-                        return new Pair<>(110, Arrays.asList(WHILE, Integer.valueOf('('), Expr, Integer.valueOf(')'), Stmt));
+                        return new Pair<>(112, Arrays.asList(WHILE, Integer.valueOf('('), Expr, Integer.valueOf(')'), Stmt));
                     default: return null;
                 }
             }
-            //# line 400
+            //# line 403
             case ExprT1: {
                 switch (lookahead) {
                     case OR:
-                        return new Pair<>(111, Arrays.asList(Oper1, Expr2, ExprT1));
+                        return new Pair<>(113, Arrays.asList(Oper1, Expr2, ExprT1));
                     case ']':
                     case ':':
                     case ')':
                     case ',':
                     case '=':
                     case ';':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 475
+            //# line 478
             case Expr4: {
                 switch (lookahead) {
                     case CASE:
@@ -1359,18 +1398,18 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(113, Arrays.asList(Expr5, ExprT4));
+                        return new Pair<>(115, Arrays.asList(Expr5, ExprT4));
                     default: return null;
                 }
             }
-            //# line 487
+            //# line 490
             case ExprT4: {
                 switch (lookahead) {
                     case LESS_EQUAL:
                     case GREATER_EQUAL:
                     case '<':
                     case '>':
-                        return new Pair<>(114, Arrays.asList(Oper4, Expr5, ExprT4));
+                        return new Pair<>(116, Arrays.asList(Oper4, Expr5, ExprT4));
                     case ']':
                     case ':':
                     case EQUAL:
@@ -1381,11 +1420,11 @@ public class Table
                     case OR:
                     case AND:
                     case ';':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 868
+            //# line 874
             case ReturnExpr: {
                 switch (lookahead) {
                     case CASE:
@@ -1406,27 +1445,27 @@ public class Table
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(116, Arrays.asList(Expr));
+                        return new Pair<>(118, Arrays.asList(Expr));
                     case ';':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 816
+            //# line 825
             case IfStmt: {
                 switch (lookahead) {
                     case IF:
-                        return new Pair<>(118, Arrays.asList(IF, Integer.valueOf('('), Expr, Integer.valueOf(')'), Stmt, ElseClause));
+                        return new Pair<>(120, Arrays.asList(IF, Integer.valueOf('('), Expr, Integer.valueOf(')'), Stmt, ElseClause));
                     default: return null;
                 }
             }
-            //# line 545
+            //# line 548
             case ExprT6: {
                 switch (lookahead) {
                     case '*':
                     case '/':
                     case '%':
-                        return new Pair<>(119, Arrays.asList(Oper6, Expr7, ExprT6));
+                        return new Pair<>(121, Arrays.asList(Oper6, Expr7, ExprT6));
                     case LESS_EQUAL:
                     case ']':
                     case GREATER_EQUAL:
@@ -1443,17 +1482,17 @@ public class Table
                     case ';':
                     case '<':
                     case '>':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 592
+            //# line 595
             case ExprT8: {
                 switch (lookahead) {
                     case '[':
-                        return new Pair<>(121, Arrays.asList(Integer.valueOf('['), Expr, Integer.valueOf(']'), ExprT8));
+                        return new Pair<>(123, Arrays.asList(Integer.valueOf('['), Expr, Integer.valueOf(']'), ExprT8));
                     case '.':
-                        return new Pair<>(122, Arrays.asList(Integer.valueOf('.'), IDENTIFIER, AfterIdentExpr, ExprT8));
+                        return new Pair<>(124, Arrays.asList(Integer.valueOf('.'), IDENTIFIER, AfterIdentExpr, ExprT8));
                     case '/':
                     case LESS_EQUAL:
                     case ']':
@@ -1473,41 +1512,41 @@ public class Table
                     case '<':
                     case '>':
                     case '%':
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
-            //# line 722
+            //# line 735
             case DefaultExpr: {
                 switch (lookahead) {
                     case DEFULT:
-                        return new Pair<>(124, Arrays.asList(DEFULT, Integer.valueOf(':'), Expr, Integer.valueOf(';')));
+                        return new Pair<>(126, Arrays.asList(DEFULT, Integer.valueOf(':'), Expr, Integer.valueOf(';')));
                     default: return null;
                 }
             }
-            //# line 562
+            //# line 565
             case Expr7: {
                 switch (lookahead) {
-                    case '!':
                     case '-':
-                    case '@':
-                    case '$':
-                    case '#':
-                        return new Pair<>(125, Arrays.asList(Oper7, Expr8));
+                    case '!':
+                        return new Pair<>(127, Arrays.asList(Oper7, Expr7));
                     case CASE:
                     case READ_LINE:
                     case NULL:
                     case SCOPY:
+                    case '@':
                     case IDENTIFIER:
                     case NEW:
+                    case '$':
                     case THIS:
                     case INSTANCEOF:
                     case LITERAL:
                     case '(':
+                    case '#':
                     case DCOPY:
                     case SUPER:
                     case READ_INTEGER:
-                        return new Pair<>(126, Arrays.asList(Expr8));
+                        return new Pair<>(128, Arrays.asList(Expr8));
                     default: return null;
                 }
             }
@@ -1515,10 +1554,10 @@ public class Table
             case ClassList: {
                 switch (lookahead) {
                     case CLASS:
-                        return new Pair<>(127, Arrays.asList(ClassDef, ClassList));
+                        return new Pair<>(129, Arrays.asList(ClassDef, ClassList));
                     case eof:
                     case eos:
-                        return new Pair<>(128, Arrays.asList());
+                        return new Pair<>(130, Arrays.asList());
                     default: return null;
                 }
             }
@@ -1526,13 +1565,13 @@ public class Table
             case Oper4: {
                 switch (lookahead) {
                     case LESS_EQUAL:
-                        return new Pair<>(129, Arrays.asList(LESS_EQUAL));
+                        return new Pair<>(131, Arrays.asList(LESS_EQUAL));
                     case GREATER_EQUAL:
-                        return new Pair<>(130, Arrays.asList(GREATER_EQUAL));
+                        return new Pair<>(132, Arrays.asList(GREATER_EQUAL));
                     case '<':
-                        return new Pair<>(131, Arrays.asList(Integer.valueOf('<')));
+                        return new Pair<>(133, Arrays.asList(Integer.valueOf('<')));
                     case '>':
-                        return new Pair<>(132, Arrays.asList(Integer.valueOf('>')));
+                        return new Pair<>(134, Arrays.asList(Integer.valueOf('>')));
                     default: return null;
                 }
             }
@@ -1540,14 +1579,14 @@ public class Table
             case Field: {
                 switch (lookahead) {
                     case STATIC:
-                        return new Pair<>(133, Arrays.asList(STATIC, Type, IDENTIFIER, Integer.valueOf('('), Formals, Integer.valueOf(')'), StmtBlock));
+                        return new Pair<>(135, Arrays.asList(STATIC, Type, IDENTIFIER, Integer.valueOf('('), Formals, Integer.valueOf(')'), StmtBlock));
                     case COMPLEX:
                     case VOID:
                     case CLASS:
                     case INT:
                     case STRING:
                     case BOOL:
-                        return new Pair<>(134, Arrays.asList(Type, IDENTIFIER, FunctionField));
+                        return new Pair<>(136, Arrays.asList(Type, IDENTIFIER, FunctionField));
                     default: return null;
                 }
             }
@@ -1572,12 +1611,12 @@ public class Table
                 return;
             }
             case 1: {
-                //# line 836
+                //# line 845
                 params[0].dstmt = new Tree.DoSubStmt(params[1].expr,params[3].stmt,params[2].loc);
                 return;
             }
             case 2: {
-                //# line 517
+                //# line 520
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1596,36 +1635,54 @@ public class Table
                 return;
             }
             case 4: {
+                //# line 368
+                    params[0].counter = Tree.RE;
+                params[0].loc = params[1].loc;
+                return;
+            }
+            case 5: {
+                //# line 373
+                    params[0].counter = Tree.TR;
+                params[0].loc = params[1].loc;
+                return;
+            }
+            case 6: {
+                //# line 378
+                    params[0].counter = Tree.IM;
+                params[0].loc = params[1].loc;
+                return;
+            }
+            case 7: {
                 //# line 292
                 params[0].counter = Tree.EQ;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 5: {
+            case 8: {
                 //# line 297
                 params[0].counter = Tree.NE;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 6: {
+            case 9: {
                 //# line 338
                 params[0].counter = Tree.MUL;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 7: {
+            case 10: {
                 //# line 343
                 params[0].counter = Tree.DIV;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 8: {
+            case 11: {
                 //# line 348
                 params[0].counter = Tree.MOD;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 9: {
+            case 12: {
                 //# line 176
                 params[0].vlist = new ArrayList<VarDef>();
                 params[0].vlist.add(params[1].vdef);
@@ -1634,48 +1691,30 @@ public class Table
                 }
                 return;
             }
-            case 10: {
+            case 13: {
                 //# line 166
                 params[0].vlist = params[1].vlist;
                 return;
             }
-            case 11: {
+            case 14: {
                 //# line 170
                 params[0].vlist = new ArrayList<VarDef>();
                 return;
             }
-            case 12: {
+            case 15: {
                 //# line 355
                 params[0].counter = Tree.NEG;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 13: {
+            case 16: {
                 //# line 360
                 params[0].counter = Tree.NOT;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 14: {
-                //# line 365
-                params[0].counter = Tree.RE;
-                     params[0].loc = params[1].loc;
-                return;
-            }
-            case 15: {
-                //# line 370
-                params[0].counter = Tree.TR;
-                     params[0].loc = params[1].loc;
-                return;
-            }
-            case 16: {
-                //# line 375
-                params[0].counter = Tree.IM;
-                     params[0].loc = params[1].loc;
-                return;
-            }
             case 17: {
-                //# line 573
+                //# line 576
                 params[0].expr = params[1].expr;
                 params[0].loc = params[1].loc;
                 if (params[2].vec != null) {
@@ -1694,19 +1733,19 @@ public class Table
                 return;
             }
             case 18: {
-                //# line 700
+                //# line 713
                 params[0].expr = params[3].expr;
                 params[0].counter = 1 + params[3].counter;
                 return;
             }
             case 19: {
-                //# line 705
+                //# line 718
                 params[0].expr = params[1].expr;
                 params[0].counter = 0;
                 return;
             }
             case 20: {
-                //# line 418
+                //# line 421
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1723,7 +1762,7 @@ public class Table
                 return;
             }
             case 22: {
-                //# line 534
+                //# line 537
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1734,24 +1773,24 @@ public class Table
                 return;
             }
             case 23: {
-                //# line 738
+                //# line 751
                 params[0].celist = new ArrayList<Tree.CaseExpr>();
                 params[0].celist.add(params[1].cexpr);
                 params[0].celist.addAll(params[2].celist);   
                 return;
             }
             case 24: {
-                //# line 745
+                //# line 758
                 params[0].celist = new ArrayList<Tree.CaseExpr>();
                 return;
             }
             case 25: {
-                //# line 811
+                //# line 820
                 params[0].stmt = new Tree.Break(params[1].loc);
                 return;
             }
             case 26: {
-                //# line 430
+                //# line 433
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -1780,12 +1819,12 @@ public class Table
                 return;
             }
             case 30: {
-                //# line 753
+                //# line 766
                 params[0].expr = new Tree.Literal(params[1].typeTag, params[1].literal, params[1].loc);
                 return;
             }
             case 31: {
-                //# line 757
+                //# line 770
                 params[0].expr = new Null(params[1].loc);
                 return;
             }
@@ -1803,97 +1842,37 @@ public class Table
                 return;
             }
             case 34: {
-                //# line 876
+                //# line 882
                 params[0].stmt = new Tree.Print(params[3].elist, params[1].loc);
                 return;
             }
             case 35: {
-                //# line 880
+                //# line 886
                 params[0].stmt = new Tree.PrintComp(params[3].elist, params[1].loc);
                 return;
             }
             case 36: {
-                //# line 805
+                //# line 814
                 params[0].stmt = new Tree.ForLoop(params[3].stmt, params[5].expr, params[7].stmt, params[9].stmt, params[1].loc);
                 return;
             }
             case 37: {
-                //# line 841
+                //# line 850
                 params[0].dstmt = params[2].dstmt;
                 return;
             }
             case 38: {
-                //# line 625
-                params[0].expr = params[1].expr;
+                //# line 628
+                params[0].expr = new Tree.Unary(params[1].counter, params[2].expr, params[1].loc);
                 return;
             }
             case 39: {
-                //# line 629
-                params[0].expr = new Tree.ReadIntExpr(params[1].loc);
+                //# line 632
+                params[0].expr = params[1].expr;
                 return;
             }
             case 40: {
-                //# line 633
-                params[0].expr = new Tree.ReadLineExpr(params[1].loc);
-                return;
-            }
-            case 41: {
-                //# line 637
-                params[0].expr = new Tree.ThisExpr(params[1].loc);
-                return;
-            }
-            case 42: {
-                //# line 641
-                if (params[2].ident != null) {
-                    params[0].expr = new Tree.NewClass(params[2].ident, params[1].loc);
-                } else {
-                    params[0].expr = new Tree.NewArray(params[2].type, params[2].expr, params[1].loc);
-                }
-                return;
-            }
-            case 43: {
-                //# line 649
-                params[0].expr = new Tree.TypeTest(params[3].expr, params[5].ident, params[1].loc);
-                return;
-            }
-            case 44: {
-                //# line 653
-                params[0].expr = params[2].expr;
-                return;
-            }
-            case 45: {
-                //# line 657
-                if (params[2].elist != null) {
-                    params[0].expr = new Tree.CallExpr(null, params[1].ident, params[2].elist, params[1].loc);
-                } else {
-                    params[0].expr = new Tree.Ident(null, params[1].ident, params[1].loc);
-                }
-                return;
-            }
-            case 46: {
-                //# line 665
-                params[0].expr = new Tree.Case(params[3].expr,  params[6].celist ,params[7].dfexpr ,params[1].loc);
-                return;
-            }
-            case 47: {
-                //# line 670
-                params[0].expr = new Tree.CopyExpr("dcopy",params[3].expr, params[1].loc);
-                return;
-            }
-            case 48: {
-                //# line 674
-                params[0].expr = new Tree.CopyExpr("scopy",params[3].expr, params[1].loc);
-                return;
-            }
-            case 49: {
-                //# line 678
-                params[0] = new SemValue();
-                params[0].expr = new Tree.SuperExpr(params[3].ident, params[5].elist, params[3].loc);
-                params[0].loc = params[3].loc;
-                return;
-            }
-            case 50: {
-                //# line 389
+                //# line 392
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -1903,34 +1882,34 @@ public class Table
                 }
                 return;
             }
-            case 51: {
-                //# line 847
+            case 41: {
+                //# line 856
                 params[0].Dolist = new ArrayList<Tree>();
                 params[0].Dolist.add(params[1].dstmt);
                 params[0].Dolist.addAll(params[2].Dolist);
                 return;
             }
-            case 52: {
-                //# line 853
+            case 42: {
+                //# line 862
                 params[0].Dolist = new ArrayList<Tree>();
                 return;
             }
-            case 53: {
+            case 43: {
                 //# line 278
                 params[0].counter = Tree.OR;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 54: {
-                //# line 823
+            case 44: {
+                //# line 832
                 params[0].stmt = params[2].stmt;
                 return;
             }
-            case 55: {
+            case 45: {
                 /* no action */
                 return;
             }
-            case 56: {
+            case 46: {
                 //# line 126
                 params[0].flist = new ArrayList<Tree>();
                 if (params[1].vdef != null) {
@@ -1941,73 +1920,134 @@ public class Table
                 params[0].flist.addAll(params[2].flist);
                 return;
             }
-            case 57: {
+            case 47: {
                 //# line 136
                 params[0].flist = new ArrayList<Tree>();
                 return;
             }
-            case 58: {
-                //# line 732
+            case 48: {
+                //# line 745
                 params[0].cexpr = new Tree.CaseExpr(params[1].expr,params[3].expr,params[1].loc);
                 return;
             }
-            case 59: {
-                //# line 782
+            case 49: {
+                //# line 795
                 params[0].elist = new ArrayList<Tree.Expr>();
                 params[0].elist.add(params[2].expr);
                 params[0].elist.addAll(params[3].elist);
                 return;
             }
-            case 60: {
-                //# line 788
+            case 50: {
+                //# line 801
                 params[0].elist = new ArrayList<Tree.Expr>();
                 return;
             }
-            case 61: {
-                //# line 712
+            case 51: {
+                //# line 638
                 params[0].expr = params[1].expr;
                 return;
             }
+            case 52: {
+                //# line 642
+                params[0].expr = new Tree.ReadIntExpr(params[1].loc);
+                return;
+            }
+            case 53: {
+                //# line 646
+                params[0].expr = new Tree.ReadLineExpr(params[1].loc);
+                return;
+            }
+            case 54: {
+                //# line 650
+                params[0].expr = new Tree.ThisExpr(params[1].loc);
+                return;
+            }
+            case 55: {
+                //# line 654
+                if (params[2].ident != null) {
+                    params[0].expr = new Tree.NewClass(params[2].ident, params[1].loc);
+                } else {
+                    params[0].expr = new Tree.NewArray(params[2].type, params[2].expr, params[1].loc);
+                }
+                return;
+            }
+            case 56: {
+                //# line 662
+                params[0].expr = new Tree.TypeTest(params[3].expr, params[5].ident, params[1].loc);
+                return;
+            }
+            case 57: {
+                //# line 666
+                params[0].expr = params[2].expr;
+                return;
+            }
+            case 58: {
+                //# line 670
+                if (params[2].elist != null) {
+                    params[0].expr = new Tree.CallExpr(null, params[1].ident, params[2].elist, params[1].loc);
+                } else {
+                    params[0].expr = new Tree.Ident(null, params[1].ident, params[1].loc);
+                }
+                return;
+            }
+            case 59: {
+                //# line 678
+                params[0].expr = new Tree.Case(params[3].expr,  params[6].celist ,params[7].dfexpr ,params[1].loc);
+                return;
+            }
+            case 60: {
+                //# line 683
+                params[0].expr = new Tree.CopyExpr("dcopy",params[3].expr, params[1].loc);
+                return;
+            }
+            case 61: {
+                //# line 687
+                params[0].expr = new Tree.CopyExpr("scopy",params[3].expr, params[1].loc);
+                return;
+            }
             case 62: {
-                //# line 716
-                params[0].expr = new Tree.TypeCast(params[2].ident, params[4].expr, params[4].loc);
+                //# line 691
+                params[0] = new SemValue();
+                params[0].expr = new Tree.SuperExpr(params[3].ident, params[5].elist, params[3].loc);
+                params[0].loc = params[3].loc;
                 return;
             }
             case 63: {
+                //# line 725
+                params[0].expr = params[1].expr;
+                return;
+            }
+            case 64: {
+                //# line 729
+                params[0].expr = new Tree.TypeCast(params[2].ident, params[4].expr, params[4].loc);
+                return;
+            }
+            case 65: {
                 //# line 113
                 params[0].cdef = new Tree.ClassDef(params[2].ident, params[3].ident, params[5].flist, params[1].loc);
                 return;
             }
-            case 64: {
-                //# line 830
+            case 66: {
+                //# line 839
                 params[0].stmt = new Tree.Return(params[2].expr, params[1].loc);
                 return;
             }
-            case 65: {
-                //# line 774
+            case 67: {
+                //# line 787
                 params[0].elist = new ArrayList<Tree.Expr>();
                 params[0].elist.add(params[1].expr);
                 params[0].elist.addAll(params[2].elist);
                 return;
             }
-            case 66: {
+            case 68: {
                 //# line 197
                 params[0].stmt = new Tree.Block(params[2].slist, params[1].loc);
                 return;
             }
-            case 67: {
+            case 69: {
                 //# line 158
                 params[0].vlist = params[2].vlist;
                 params[0].stmt = params[4].stmt;
-                return;
-            }
-            case 68: {
-                /* no action */
-                return;
-            }
-            case 69: {
-                //# line 618
-                params[0].elist = params[2].elist;
                 return;
             }
             case 70: {
@@ -2015,11 +2055,20 @@ public class Table
                 return;
             }
             case 71: {
-                //# line 859
-                params[0].stmt = new Tree.DoStmt(params[3].Dolist,params[2].dstmt,params[1].loc);
+                //# line 621
+                params[0].elist = params[2].elist;
                 return;
             }
             case 72: {
+                /* no action */
+                return;
+            }
+            case 73: {
+                //# line 868
+                params[0].stmt = new Tree.DoStmt(params[3].Dolist,params[2].dstmt,params[1].loc);
+                return;
+            }
+            case 74: {
                 //# line 34
                 params[0].clist = new ArrayList<ClassDef>();
                 params[0].clist.add(params[1].cdef);
@@ -2029,12 +2078,12 @@ public class Table
                 params[0].prog = new Tree.TopLevel(params[0].clist, params[0].loc);
                 return;
             }
-            case 73: {
-                //# line 383
+            case 75: {
+                //# line 386
                 params[0].expr = params[1].expr;
                 return;
             }
-            case 74: {
+            case 76: {
                 //# line 94
                 params[0].type = params[1].type;
                 for (int i = 0; i < params[2].counter; ++i) {
@@ -2042,8 +2091,8 @@ public class Table
                 }
                 return;
             }
-            case 75: {
-                //# line 505
+            case 77: {
+                //# line 508
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -2053,13 +2102,13 @@ public class Table
                 }
                 return;
             }
-            case 76: {
-                //# line 686
+            case 78: {
+                //# line 699
                 params[0].ident = params[1].ident;
                 return;
             }
-            case 77: {
-                //# line 690
+            case 79: {
+                //# line 703
                 params[0].type = params[1].type;
                 for (int i = 0; i < params[3].counter; ++i) {
                     params[0].type = new Tree.TypeArray(params[0].type, params[1].loc);
@@ -2067,19 +2116,10 @@ public class Table
                 params[0].expr = params[3].expr;
                 return;
             }
-            case 78: {
+            case 80: {
                 //# line 269
                 params[0].loc = params[1].loc;
                 params[0].expr = params[2].expr;
-                return;
-            }
-            case 79: {
-                /* no action */
-                return;
-            }
-            case 80: {
-                //# line 119
-                params[0].ident = params[2].ident;
                 return;
             }
             case 81: {
@@ -2087,29 +2127,38 @@ public class Table
                 return;
             }
             case 82: {
+                //# line 119
+                params[0].ident = params[2].ident;
+                return;
+            }
+            case 83: {
+                /* no action */
+                return;
+            }
+            case 84: {
                 //# line 326
                 params[0].counter = Tree.PLUS;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 83: {
+            case 85: {
                 //# line 331
                 params[0].counter = Tree.MINUS;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 84: {
+            case 86: {
                 //# line 103
                 params[0].counter = 1 + params[3].counter;
                 return;
             }
-            case 85: {
+            case 87: {
                 //# line 107
                 params[0].counter = 0;
                 return;
             }
-            case 86: {
-                //# line 447
+            case 88: {
+                //# line 450
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -2119,23 +2168,23 @@ public class Table
                 }
                 return;
             }
-            case 87: {
-                //# line 763
+            case 89: {
+                //# line 776
                 params[0].elist = params[1].elist;
                 return;
             }
-            case 88: {
-                //# line 767
+            case 90: {
+                //# line 780
                 params[0].elist = new ArrayList<Tree.Expr>();
                 return;
             }
-            case 89: {
+            case 91: {
                 //# line 62
                 params[0].vdef = new Tree.VarDef(params[2].ident, params[1].type, params[2].loc);
                 return;
             }
-            case 90: {
-                //# line 459
+            case 92: {
+                //# line 462
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -2149,16 +2198,16 @@ public class Table
                 }
                 return;
             }
-            case 91: {
+            case 93: {
                 /* no action */
                 return;
             }
-            case 92: {
+            case 94: {
                 //# line 211
                 params[0].stmt = params[1].vdef;
                 return;
             }
-            case 93: {
+            case 95: {
                 //# line 215
                 if (params[1].stmt == null) {
                     params[0].stmt = new Tree.Skip(params[2].loc);
@@ -2167,47 +2216,47 @@ public class Table
                 }
                 return;
             }
-            case 94: {
+            case 96: {
                 //# line 223
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 95: {
+            case 97: {
                 //# line 227
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 96: {
+            case 98: {
                 //# line 231
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 97: {
+            case 99: {
                 //# line 235
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 98: {
+            case 100: {
                 //# line 239
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 99: {
+            case 101: {
                 //# line 243
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 100: {
+            case 102: {
                 //# line 247
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 101: {
+            case 103: {
                 //# line 251
                 params[0].stmt = params[1].stmt;
                 return;
             }
-            case 102: {
+            case 104: {
                 //# line 258
                 if (params[2].expr == null) {
                     params[0].stmt = new Tree.Calculate(params[1].expr, params[1].loc);
@@ -2216,47 +2265,47 @@ public class Table
                 }
                 return;
             }
-            case 103: {
+            case 105: {
                 /* no action */
                 return;
             }
-            case 104: {
+            case 106: {
                 //# line 68
                 params[0].type = new Tree.TypeIdent(Tree.INT, params[1].loc);
                 return;
             }
-            case 105: {
+            case 107: {
                 //# line 72
                 params[0].type = new Tree.TypeIdent(Tree.VOID, params[1].loc);
                 return;
             }
-            case 106: {
+            case 108: {
                 //# line 76
                 params[0].type = new Tree.TypeIdent(Tree.COMPLEX, params[1].loc);
                 return;
             }
-            case 107: {
+            case 109: {
                 //# line 80
                 params[0].type = new Tree.TypeIdent(Tree.BOOL, params[1].loc);
                 return;
             }
-            case 108: {
+            case 110: {
                 //# line 84
                 params[0].type = new Tree.TypeIdent(Tree.STRING, params[1].loc);
                 return;
             }
-            case 109: {
+            case 111: {
                 //# line 88
                 params[0].type = new Tree.TypeClass(params[2].ident, params[1].loc);
                 return;
             }
-            case 110: {
-                //# line 799
+            case 112: {
+                //# line 808
                 params[0].stmt = new Tree.WhileLoop(params[3].expr, params[5].stmt, params[1].loc);
                 return;
             }
-            case 111: {
-                //# line 401
+            case 113: {
+                //# line 404
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -2270,12 +2319,12 @@ public class Table
                 }
                 return;
             }
-            case 112: {
+            case 114: {
                 /* no action */
                 return;
             }
-            case 113: {
-                //# line 476
+            case 115: {
+                //# line 479
                 params[0].expr = params[1].expr;
                 if (params[2].svec != null) {
                     for (int i = 0; i < params[2].svec.size(); ++i) {
@@ -2285,8 +2334,8 @@ public class Table
                 }
                 return;
             }
-            case 114: {
-                //# line 488
+            case 116: {
+                //# line 491
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -2298,15 +2347,6 @@ public class Table
                     params[0].lvec.addAll(params[3].lvec);
                     params[0].evec.addAll(params[3].evec);
                 }
-                return;
-            }
-            case 115: {
-                /* no action */
-                return;
-            }
-            case 116: {
-                //# line 869
-                params[0].expr = params[1].expr;
                 return;
             }
             case 117: {
@@ -2314,12 +2354,21 @@ public class Table
                 return;
             }
             case 118: {
-                //# line 817
-                params[0].stmt = new Tree.If(params[3].expr, params[5].stmt, params[6].stmt, params[1].loc);
+                //# line 875
+                params[0].expr = params[1].expr;
                 return;
             }
             case 119: {
-                //# line 546
+                /* no action */
+                return;
+            }
+            case 120: {
+                //# line 826
+                params[0].stmt = new Tree.If(params[3].expr, params[5].stmt, params[6].stmt, params[1].loc);
+                return;
+            }
+            case 121: {
+                //# line 549
                 params[0].svec = new Vector<Integer>();
                 params[0].lvec = new Vector<Location>();
                 params[0].evec = new Vector<Expr>();
@@ -2333,12 +2382,12 @@ public class Table
                 }
                 return;
             }
-            case 120: {
+            case 122: {
                 /* no action */
                 return;
             }
-            case 121: {
-                //# line 593
+            case 123: {
+                //# line 596
                 SemValue sem = new SemValue();
                 sem.expr = params[2].expr;
                 params[0].vec = new Vector<SemValue>();
@@ -2348,8 +2397,8 @@ public class Table
                 }
                 return;
             }
-            case 122: {
-                //# line 603
+            case 124: {
+                //# line 606
                 SemValue sem = new SemValue();
                 sem.ident = params[2].ident;
                 sem.loc = params[2].loc;
@@ -2361,26 +2410,26 @@ public class Table
                 }
                 return;
             }
-            case 123: {
+            case 125: {
                 /* no action */
                 return;
             }
-            case 124: {
-                //# line 723
+            case 126: {
+                //# line 736
                 params[0].dfexpr = new Tree.DfExpr(params[3].expr,params[1].loc);
                 return;
             }
-            case 125: {
-                //# line 563
+            case 127: {
+                //# line 566
                 params[0].expr = new Tree.Unary(params[1].counter, params[2].expr, params[1].loc);
                 return;
             }
-            case 126: {
-                //# line 567
+            case 128: {
+                //# line 570
                 params[0].expr = params[1].expr;
                 return;
             }
-            case 127: {
+            case 129: {
                 //# line 45
                 params[0].clist = new ArrayList<ClassDef>();
                 params[0].clist.add(params[1].cdef);
@@ -2389,41 +2438,41 @@ public class Table
                 }
                 return;
             }
-            case 128: {
+            case 130: {
                 /* no action */
                 return;
             }
-            case 129: {
+            case 131: {
                 //# line 304
                 params[0].counter = Tree.LE;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 130: {
+            case 132: {
                 //# line 309
                 params[0].counter = Tree.GE;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 131: {
+            case 133: {
                 //# line 314
                 params[0].counter = Tree.LT;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 132: {
+            case 134: {
                 //# line 319
                 params[0].counter = Tree.GT;
                 params[0].loc = params[1].loc;
                 return;
             }
-            case 133: {
+            case 135: {
                 //# line 142
                 params[0].fdef = new Tree.MethodDef(true, params[3].ident, params[2].type, params[5].vlist,
                     (Block) params[7].stmt, params[3].loc);
                 return;
             }
-            case 134: {
+            case 136: {
                 //# line 147
                 if (params[3].vlist != null) {
                     params[0].fdef = new Tree.MethodDef(false, params[2].ident, params[1].type, params[3].vlist,

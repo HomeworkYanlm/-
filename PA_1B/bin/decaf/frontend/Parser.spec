@@ -361,21 +361,24 @@ Oper7           :   '-'
                         $$.counter = Tree.NOT;
                         $$.loc = $1.loc;
                     }
-                |   '@'
-            		{
-            			$$.counter = Tree.RE;
+                 
+                ;
+
+Oper8           :  '@'
+                    {
+                        $$.counter = Tree.RE;
                     $$.loc = $1.loc;
-            		}
-            	|   '#'
-            		{
-            			$$.counter = Tree.TR;
+                    }
+                |   '#'
+                    {
+                        $$.counter = Tree.TR;
                     $$.loc = $1.loc;
-            		}
-            	|   '$'
-            		{
-            			$$.counter = Tree.IM;
+                    }
+                |   '$'
+                    {
+                        $$.counter = Tree.IM;
                     $$.loc = $1.loc;
-            		}
+                    }
                 ;
 
 // expressions
@@ -559,7 +562,7 @@ ExprT6          :   Oper6 Expr7 ExprT6
                 |   /* empty */
                 ;
 
-Expr7           :   Oper7 Expr8
+Expr7           :   Oper7 Expr7
                     {
                         $$.expr = new Tree.Unary($1.counter, $2.expr, $1.loc);
                     }
@@ -621,7 +624,17 @@ AfterIdentExpr  :   '(' Actuals ')'
                 |   /* empty */
                 ;
 
-Expr9           :   Constant
+Expr9           :   Oper8 Expr9
+                    {
+                        $$.expr = new Tree.Unary($1.counter, $2.expr, $1.loc);
+                    }
+                |   Expr10
+                    {
+                        $$.expr = $1.expr;
+                    }
+                ;
+
+Expr10          :   Constant
                     {
                         $$.expr = $1.expr;
                     }
@@ -789,10 +802,6 @@ SubExprList     :   ',' Expr SubExprList
                         $$.elist = new ArrayList<Tree.Expr>();
                     }
                 ;
-                
-
-
-
 
 // statements
 WhileStmt       :   WHILE '(' Expr ')' Stmt
@@ -860,10 +869,7 @@ DoStmt          :   DDO DoSubStmt DoBranchlist  OOD
                         $$.stmt = new Tree.DoStmt($3.Dolist,$2.dstmt,$1.loc);
                     }
                 ;
-    
 					
-
-
 
 ReturnExpr      :   Expr
                     {

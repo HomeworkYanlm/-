@@ -62,20 +62,11 @@ public abstract class BaseLexer {
 
 	protected int imageConst(String ival) {
 		
-//			String str = ival.substring(0,ival.length()-1);
-//			int acm = Integer.decode(str);
-//			setSemantic(getLocation(), SemValue.createLiteral(Tree.IMAGE,str ));
-//			// setSemantic(getLocation(), SemValue.createLiteral(Tree.IMAGE, sval));
-//		} catch (NumberFormatException e) {
-//			Driver.getDriver().issueError(
-//					new IntTooLargeError(getLocation(), ival));
-//		}
+
 		try {
 			String str = ival.substring(0,ival.length()-1);
 			int acm = Integer.decode(str);
 			setSemantic(getLocation(), SemValue.createLiteral(Tree.IMAGE, ival));
-		
-		
 		}
 		catch(NumberFormatException e) {
 			Driver.getDriver().issueError(

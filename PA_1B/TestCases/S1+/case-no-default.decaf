@@ -1,20 +1,10 @@
-// syntax error: case expression has no default branch
-
 class Main {
     static string dayOfWeek(int n) {
 		return case (n) {
 			1: "Monday";
 			2: "Tuesday";
-			3: "Wednesday";
-			4: "Thursday";
-			5: "Friday";
-			6: "Saturday";
-			7: "Sunday";
-			
+			3: "Wednesday";;
+			default: "2333"
 		};
 	}
-
-    static void main() {
-    	Print(dayOfWeek(8));
-    }
 }

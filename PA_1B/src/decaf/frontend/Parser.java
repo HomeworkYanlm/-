@@ -80,75 +80,66 @@ public class Parser extends Table {
      */
     private SemValue parse(int symbol, Set<Integer> follow) {
        
-//        System.out.println(name(symbol)+"::"+name(lookahead)+":"+lexer.getLocation());
-       
-        Set<Integer>setBeign = beginSet(symbol);
-        Set<Integer>setFollow = followSet(symbol);
-        Set<Integer>setEnd = followSet(symbol); 
-        setEnd.addAll(follow);
-        Set<Integer>full = setBeign;
-        full.addAll(setFollow);
+        // System.out.println(name(symbol)+"::"+name(lookahead)+":"+lexer.getLocation());
+        if(!beginSet(symbol).contains(lookahead))
+        {
+            
+            // System.out.println("none:"+name(lookahead));
+            error();
+            while(!(beginSet(symbol).contains(lookahead) 
+                || followSet(symbol).contains(lookahead)
+                || follow.contains(lookahead)))
+            {
+                lookahead = lex();
+            }
+
+            // System.out.println("finsh:"+name(lookahead));
+            
+            if(beginSet(symbol).contains(lookahead))
+            {
+                // System.out.println("begin");
+                Set<Integer> newfollow = new HashSet<Integer>();
+                newfollow.addAll(follow);
+                newfollow.addAll(followSet(symbol));
+                return parse(symbol,newfollow);
+            }
+            else
+            {
+                // System.out.println("end");
+                return null;
+            }
+        }
         
-        Pair<Integer, List<Integer>> result = query(symbol, lookahead); // get production by lookahead symbol
-//        if(setBeign.contains(lookahead)==false)
-//        {
-//        		 printSymbolSet(full);
-//             printSymbolSet(setFollow);
-//             printSymbolSet(setBeign);
-//          	System.out.println("none:"+name(lookahead));
-//        		error();
-//        		while(name(lookahead)!="<eos>"&& (full.contains(lookahead) == false))
-//        			{
-//        				System.out.println("skip:"+name(lookahead));
-//        				lookahead = lex();
-//        			}
-//        		System.out.println("finsh:"+name(lookahead));
-//        		
-//        		if(setBeign.contains(lookahead))
-//        		{
-//        			System.out.println("begin");
-//        			
-//        			result = query(symbol, lookahead); // get production by lookahead symbol
-//        			if(setBeign.contains(lookahead)==false)
-//        			{
-//        				System.out.println("fuck u");
-//        				System.out.println(name(symbol)+">:"+name(lookahead));
-//        			}
-//        		}
-//        		else if(setEnd.contains(lookahead))
-//        		{
-//        			System.out.println("end");
-//        			return null;
-//        		}
-//        		
-//        }
-        
-        
-       
-        		if(setBeign.contains(lookahead)==false)
-        		{
-        			System.out.println(name(symbol)+">:"+name(lookahead));
-                printSymbolSet(setFollow);
-                printSymbolSet(setBeign);
-        			System.out.println("!end");
-        		}
-        			int actionId = result.getKey(); // get user-defined action
-        			List<Integer> right = result.getValue(); // right-hand side of production
-        	        int length = right.size();
-        	        		SemValue[] params = new SemValue[length + 1];
-        	        follow.addAll(setFollow);
-        	        for (int i = 0; i < length; i++) { // parse right-hand side symbols one by one
-        	            int term = right.get(i);
-        	            params[i + 1] = isNonTerminal(term)
-        	                    ? parse(term,follow ) // for non terminals: recursively parse it
-        	                    : matchToken(term) // for terminals: match token
-        	                    ;
-        	        }
-        	        
-        	        
-        	        params[0] = new SemValue(); // initialize return value
-        	        act(actionId, params); // do user-defined action
-        	        return params[0];
+        else
+       {
+
+            Pair<Integer, List<Integer>> result = query(symbol, lookahead); // get production by lookahead symbol
+            int actionId = result.getKey(); // get user-defined action
+            List<Integer> right = result.getValue(); // right-hand side of production
+            int length = right.size();
+
+            SemValue[] params = new SemValue[length + 1];
+            Set<Integer> newfollow = new HashSet<Integer>();
+            newfollow.addAll(follow);
+            newfollow.addAll(followSet(symbol));
+            for (int i = 0; i < length; i++) { // parse right-hand side symbols one by one
+               int term = right.get(i);
+               params[i + 1] = isNonTerminal(term)
+                       ? parse(term, newfollow) // for non terminals: recursively parse it
+                       : matchToken(term) // for terminals: match token
+                       ;
+            }
+
+            params[0] = new SemValue(); // initialize return value
+            for (int i = 0; i < length + 1; i++)
+                if(params[i] == null) 
+                    return null;
+            act(actionId, params);
+            return params[0];
+
+
+
+        }
 
     }
 

@@ -15,7 +15,7 @@ import decaf.utils.MiscUtils;
 
 /**
  * Root class for abstract syntax tree nodes. It provide assign
- *  definitions for specific tree nodes as subclasses nested inside imgconst cond print Expr Case Call Copy DO SubS re
+ *  definitions for specific tree nodes as subclasses nested inside imgconst cond print Expr Case Call Copy DO SubS re RE TR
  *  There are 40 such subclasses.
  *
  *  Each subclass is highly standardized.  It generally contains only tree
@@ -130,7 +130,7 @@ public abstract class Tree {
     /**
      * Break statements, of type Break.
      */
-    public static final int BREAK = EXEC + 1;
+    public static final int BRE TRAK = EXEC + 1;
 
     /**
      * Continue statements, of type Continue.
