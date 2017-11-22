@@ -1,29 +1,25 @@
 /**
  * @(#)Tree.java	1.30 03/01/23
  *
- * Copyright 2003 Sun Microsystems, Inc. All rights reserved.
- * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ * Copyright 2003 Sun Microsystems, Inc. All rights reserved. Call 
+ * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. assig Sys PrintComp
  */
 package decaf.tree;
 
 import java.util.List;
 
 import decaf.*;
-import decaf.type.*;
-import decaf.scope.*;
-import decaf.symbol.*;
-import decaf.symbol.Class;
 import decaf.utils.IndentPrintWriter;
 import decaf.utils.MiscUtils;
 
 
 /**
- * Root class for abstract syntax tree nodes. It provides
- *  definitions for specific tree nodes as subclasses nested inside
+ * Root class for abstract syntax tree nodes. It provide assign
+ *  definitions for specific tree nodes as subclasses nested inside imgconst cond print Expr Case Call Copy DO SubS
  *  There are 40 such subclasses.
  *
  *  Each subclass is highly standardized.  It generally contains only tree
- *  fields for the syntactic subcomponents of the node.  Some classes that
+ *  fields for the syntactic subcomponents of the node.  Some classes that compcast Print PRINT empty List
  *  represent identifier uses or definitions also define a
  *  Symbol field that denotes the represented identifier.  Classes
  *  for non-local jumps also carry the jump target as a field.  The root
@@ -33,8 +29,8 @@ import decaf.utils.MiscUtils;
  *
  *  The only method defined in subclasses is `visit' which applies a
  *  given visitor to the tree. The actual tree processing is done by
- *  visitor classes in other packages. The abstract class
- *  Visitor, as well as an Factory interface for trees, are
+ *  visitor classes in other packages. The abstract class imgconst
+ *  Visitor, as well as an Factory interface for trees, are Visitor
  *  defined as inner classes in Tree.
  *  @see TreeMaker
  *  @see TreeInfo
@@ -44,7 +40,7 @@ import decaf.utils.MiscUtils;
 public abstract class Tree {
 
     /**
-     * Toplevel nodes, of type TopLevel, representing entire source files.
+     * Toplevel nodes, of type TopLevel, representing entire source files.const
      */
     public static final int TOPLEVEL = 1;
 
@@ -93,21 +89,14 @@ public abstract class Tree {
      */
     public static final int FORLOOP = WHILELOOP + 1;
 
+
     /**
      * Labelled statements, of type Labelled.
      */
     public static final int LABELLED = FORLOOP + 1;
 
-    /**
-     * Switch statements, of type Switch.
-     */
-    public static final int SWITCH = LABELLED + 1;
-
-    /**
-     * Case parts in switch statements, of type Case.
-     */
-    public static final int CASE = SWITCH + 1;
-
+    public static final int CASE = LABELLED + 1;
+    
     /**
      * Synchronized statements, of type Synchonized.
      */
@@ -249,12 +238,15 @@ public abstract class Tree {
     public static final int ERRONEOUS = TYPEPARAMETER + 1;
 
     /**
-     * Unary operators, of type Unary.
+     * Unary operators, of type Unary.add
      */
     public static final int POS = ERRONEOUS + 1;
     public static final int NEG = POS + 1;
     public static final int NOT = NEG + 1;
-    public static final int COMPL = NOT + 1;
+    public static final int RE = NOT + 1;
+    public static final int IM = RE + 1;
+    public static final int TR = IM + 1;
+    public static final int COMPL = TR + 1;
     public static final int PREINC = COMPL + 1;
     public static final int PREDEC = PREINC + 1;
     public static final int POSTINC = PREDEC + 1;
@@ -294,6 +286,7 @@ public abstract class Tree {
     public static final int READINTEXPR = THISEXPR + 1;
     public static final int READLINEEXPR = READINTEXPR + 1;
     public static final int PRINT = READLINEEXPR + 1;
+    public static final int PRINTCOMP = PRINT + 1;
     
     /**
      * Tags for Literal and TypeLiteral
@@ -302,14 +295,22 @@ public abstract class Tree {
     public static final int INT = VOID + 1; 
     public static final int BOOL = INT + 1; 
     public static final int STRING = BOOL + 1; 
+    public static final int COMPLEX = STRING + 1; 
+    public static final int IMAGE = COMPLEX + 1; 
 
+    public static final int CASEEXPER = IMAGE + 1;
+    public static final int DEFULTEXPR = CASEEXPER + 1;
+    public static final int SUPEREXPR = DEFULTEXPR + 1;
+    public static final int COPYEXPR = SUPEREXPR + 1;
+ 
+    public static final int DOSUBSTMT = COPYEXPR + 1;
+    public static final int DOSTMT = DOSUBSTMT + 1;
 
     public Location loc;
-    public Type type;
     public int tag;
 
     /**
-     * Initialize tree with given tag.
+     * Initialize tree with given tag.add
      */
     public Tree(int tag, Location loc) {
         super();
@@ -320,14 +321,6 @@ public abstract class Tree {
 	public Location getLocation() {
 		return loc;
 	}
-
-    /**
-      * Set type field and return this tree.
-      */
-    public Tree setType(Type type) {
-        this.type = type;
-        return this;
-    }
 
     /**
       * Visit this tree with a given visitor.
@@ -341,8 +334,6 @@ public abstract class Tree {
     public static class TopLevel extends Tree {
 
 		public List<ClassDef> classes;
-		public Class main;
-		public GlobalScope globalScope;
 		
 		public TopLevel(List<ClassDef> classes, Location loc) {
 			super(TOPLEVEL, loc);
@@ -370,7 +361,6 @@ public abstract class Tree {
     	public String name;
     	public String parent;
     	public List<Tree> fields;
-    	public Class symbol;
 
         public ClassDef(String name, String parent, List<Tree> fields,
     			Location loc) {
@@ -404,7 +394,6 @@ public abstract class Tree {
     	public TypeLiteral returnType;
     	public List<VarDef> formals;
     	public Block body;
-    	public Function symbol;
     	
         public MethodDef(boolean statik, String name, TypeLiteral returnType,
         		List<VarDef> formals, Block body, Location loc) {
@@ -444,7 +433,6 @@ public abstract class Tree {
     	
     	public String name;
     	public TypeLiteral type;
-    	public Variable symbol;
 
         public VarDef(String name, TypeLiteral type, Location loc) {
             super(VARDEF, loc);
@@ -488,8 +476,7 @@ public abstract class Tree {
     public static class Block extends Tree {
 
     	public List<Tree> block;
-    	public LocalScope associatedScope;
-
+ 
         public Block(List<Tree> block, Location loc) {
             super(BLOCK, loc);
     		this.block = block;
@@ -573,7 +560,7 @@ public abstract class Tree {
     		if (init != null) {
     			init.printTo(pw);
     		} else {
-    			pw.println("<emtpy>");
+    			pw.println("<empty>");
     		}
     		condition.printTo(pw);
     		if (update != null) {
@@ -700,6 +687,31 @@ public abstract class Tree {
         }
     }
 
+    public static class PrintComp extends Tree {
+
+      public List<Expr> exprs;
+
+      public PrintComp(List<Expr> exprs, Location loc) {
+        super(PRINTCOMP, loc);
+        this.exprs = exprs;
+      }
+
+        @Override
+        public void accept(Visitor v) {
+            v.visitPrintComp(this);
+        }
+
+        @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println("printcomp");
+        pw.incIndent();
+        for (Expr e : exprs) {
+          e.printTo(pw);
+        }
+        pw.decIndent();
+        }
+    }
+
     /**
       * A return statement.
       */
@@ -730,7 +742,6 @@ public abstract class Tree {
 
     public abstract static class Expr extends Tree {
 
-    	public Type type;
     	public boolean isClass;
     	public boolean usedForRef;
     	
@@ -739,16 +750,147 @@ public abstract class Tree {
     	}
     }
 
+
+
+
+    public static class DoSubStmt extends Tree{
+
+      public Expr expr;
+      public Tree stmt;
+
+      public DoSubStmt(Expr expr,Tree stmt, Location loc) {
+        super(DOSUBSTMT, loc);
+        this.expr = expr;
+        this.stmt = stmt;
+      }
+
+      @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println("branch");
+        pw.incIndent();
+        expr.printTo(pw);
+        stmt.printTo(pw);
+        pw.decIndent();
+      }
+    }
+
+
+
+    public static class DoStmt extends Tree{
+
+      public List<Tree> Trees;
+      public Tree dstmt;
+
+      public DoStmt( List<Tree> Trees,Tree dstmt, Location loc) {
+        super(DOSTMT, loc);
+        this.Trees = Trees;
+        this.dstmt = dstmt;
+      }
+
+      @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println("do");
+
+        pw.incIndent();
+        pw.println("branches");
+        pw.incIndent();
+          for (Tree e : Trees) {
+
+           e.printTo(pw);
+        }
+        dstmt.printTo(pw);
+        pw.decIndent();
+        pw.decIndent();
+        
+      }
+    }
+
+
+
     /**
       * A method invocation
       */
+
+       /**
+      * A case.
+      */
+
+
+    public static class CaseExpr extends Expr {
+      public Expr key;
+      public Expr exprs;
+
+      public CaseExpr(Expr key,Expr exprs, Location loc) {
+        super(CASEEXPER, loc);
+        this.key = key;
+        this.exprs = exprs;
+      }
+        public void printTo(IndentPrintWriter pw) {
+        pw.println("case");
+
+        pw.incIndent();
+        key.printTo(pw);
+        
+          exprs.printTo(pw);
+        pw.decIndent();
+      }
+    }
+
+
+    public static class DfExpr extends Expr {
+      public Expr exprs;
+
+      public DfExpr(Expr exprs, Location loc) {
+        super(DEFULTEXPR, loc);
+        this.exprs = exprs;
+      }
+        @Override
+        public void printTo(IndentPrintWriter pw) {
+        pw.println("default");
+        pw.incIndent();
+          exprs.printTo(pw);
+        pw.decIndent();
+      }
+    }
+
+
+
+    public static class Case extends Expr {
+      public Expr condition;
+      public List<CaseExpr> caseboday;
+      public DfExpr deft;
+        public Case(Expr condition, List<CaseExpr> caseboday,DfExpr deft, Location loc) {
+            super(CASE, loc);
+            this.condition = condition; 
+            this.caseboday = caseboday;
+            this.deft = deft;
+        }
+      @Override
+        public void accept(Visitor v) {
+            v.visitCase(this);
+        }
+      @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println("cond");
+        pw.incIndent();
+        condition.printTo(pw);
+        pw.println("cases");
+        pw.incIndent();
+        for (CaseExpr e : caseboday) {
+          e.printTo(pw);
+        }
+        deft.printTo(pw);
+        pw.decIndent();
+        pw.decIndent();
+      }
+
+    }
+
     public static class Apply extends Expr {
 
     	public Expr receiver;
     	public String method;
     	public List<Expr> actuals;
-    	public Function symbol;
-    	public boolean isArrayLength;
 
         public Apply(Expr receiver, String method, List<Expr> actuals,
     			Location loc) {
@@ -786,7 +928,6 @@ public abstract class Tree {
     public static class NewClass extends Expr {
 
     	public String className;
-    	public Class symbol;
 
         public NewClass(String className, Location loc) {
             super(NEWCLASS, loc);
@@ -904,9 +1045,18 @@ public abstract class Tree {
     		switch (tag) {
     		case NEG:
     			unaryOperatorToString(pw, "neg");
+          break;
+        case RE:
+          unaryOperatorToString(pw, "re");
     			break;
+        case IM:
+          unaryOperatorToString(pw, "im");
+          break;
     		case NOT:
     			unaryOperatorToString(pw, "not");
+          break;
+        case TR:
+          unaryOperatorToString(pw, "compcast");
     			break;
 			}
     	}
@@ -981,6 +1131,15 @@ public abstract class Tree {
     		case GE:
     			binaryOperatorPrintTo(pw, "geq");
     			break;
+        case RE:
+          binaryOperatorPrintTo(pw, "re");
+          break;
+        case IM:
+          binaryOperatorPrintTo(pw, "im");
+          break;
+        case TR:
+          binaryOperatorPrintTo(pw, "compcast");
+          break;
     		}
     	}
     }
@@ -992,8 +1151,6 @@ public abstract class Tree {
     	public String method;
 
     	public List<Expr> actuals;
-
-    	public Function symbol;
 
     	public boolean isArrayLength;
 
@@ -1025,6 +1182,38 @@ public abstract class Tree {
     		}
     		pw.decIndent();
     	}
+    }
+
+    public static class SuperExpr extends Expr {
+
+      public String method;
+
+      public List<Expr> actuals;
+
+      public boolean isArrayLength;
+
+      public SuperExpr(String method, List<Expr> actuals,
+          Location loc) {
+        super(SUPEREXPR, loc);
+        this.method = method;
+        this.actuals = actuals;
+      }
+
+      @Override
+      public void accept(Visitor visitor) {
+        visitor.visitSuperExpr(this);
+      }
+
+      @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println("call " + method);
+        pw.incIndent();
+        for (Expr e : actuals) {
+          e.printTo(pw);
+        }
+        pw.println("super");
+        pw.decIndent();
+      }
     }
 
     public static class ReadIntExpr extends Expr {
@@ -1078,6 +1267,31 @@ public abstract class Tree {
     	}
    }
 
+   public static class CopyExpr extends Expr {
+
+      Expr expr;
+      String msg;
+      public CopyExpr(String msg ,Expr expr,Location loc) {
+        super(COPYEXPR, loc);
+        this.msg = msg;
+        this.expr = expr;
+      }
+
+      @Override
+      public void accept(Visitor visitor) {
+        visitor.visitCopyExpr(this);
+      }
+
+      @Override
+      public void printTo(IndentPrintWriter pw) {
+        pw.println(msg);
+        pw.incIndent();
+        expr.printTo(pw);
+        pw.decIndent();
+        
+      }
+   }
+
     /**
       * A type cast.
       */
@@ -1085,7 +1299,6 @@ public abstract class Tree {
 
     	public String className;
     	public Expr expr;
-    	public Class symbol;
 
         public TypeCast(String className, Expr expr, Location loc) {
             super(TYPECAST, loc);
@@ -1115,7 +1328,6 @@ public abstract class Tree {
     	
     	public Expr instance;
     	public String className;
-    	public Class symbol;
 
         public TypeTest(Expr instance, String className, Location loc) {
             super(TYPETEST, loc);
@@ -1174,7 +1386,6 @@ public abstract class Tree {
 
     	public Expr owner;
     	public String name;
-    	public Variable symbol;
     	public boolean isDefined;
 
         public Ident(Expr owner, String name, Location loc) {
@@ -1225,6 +1436,9 @@ public abstract class Tree {
     		case INT:
     			pw.println("intconst " + value);
     			break;
+        case IMAGE:
+          pw.println("imgconst " + value);
+          break;
     		case BOOL:
     			pw.println("boolconst " + value);
     			break;
@@ -1251,8 +1465,6 @@ public abstract class Tree {
     }
 
     public static abstract class TypeLiteral extends Tree {
-    	
-    	public Type type;
     	
     	public TypeLiteral(int tag, Location loc){
     		super(tag, loc);
@@ -1290,6 +1502,9 @@ public abstract class Tree {
     		case VOID:
     			pw.print("voidtype");
     			break;
+        case COMPLEX:
+          pw.print("comptype");
+          break;
     		default:
     			pw.print("stringtype");
     		}
@@ -1381,6 +1596,10 @@ public abstract class Tree {
             visitTree(that);
         }
 
+        public void visitCase(Case that) {
+            visitTree(that);
+        }
+
         public void visitIf(If that) {
             visitTree(that);
         }
@@ -1396,7 +1615,12 @@ public abstract class Tree {
         public void visitReturn(Return that) {
             visitTree(that);
         }
-
+        public void visitDoSubStmt(DoSubStmt that){
+            visitTree(that);
+        }
+        public void visitDoStmt(DoStmt that){
+            visitTree(that);
+        }
         public void visitApply(Apply that) {
             visitTree(that);
         }
@@ -1425,6 +1649,10 @@ public abstract class Tree {
             visitTree(that);
         }
 
+        public void visitSuperExpr(SuperExpr that) {
+            visitTree(that);
+        }
+
         public void visitReadIntExpr(ReadIntExpr that) {
             visitTree(that);
         }
@@ -1437,7 +1665,15 @@ public abstract class Tree {
             visitTree(that);
         }
 
+        public void visitPrintComp(PrintComp that) {
+            visitTree(that);
+        }
+
         public void visitThisExpr(ThisExpr that) {
+            visitTree(that);
+        }
+
+        public void visitCopyExpr(CopyExpr that) {
             visitTree(that);
         }
 
